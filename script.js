@@ -40,7 +40,6 @@ if (todaysQuote) {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const date = urlParams.get("date");
-console.log(date);
 
 // Find the quote for the given date
 const quote = quoteOfTheDay.find((q) => q.date === date);
@@ -52,14 +51,10 @@ if (quote) {
   const movieText = document.querySelector("#exampleModalLabel");
   const srcText = document.querySelector("#youTube");
 
-  console.log(quoteText);
-  console.log(movieText);
-  console.log(srcText);
-  
   quoteText.textContent = `"${quote.quote}"`;
   movieText.textContent = `${quote.movie}`;
   srcText.src = `${quote.src}`;
 
 } else {
-  console.log("Sorry, there is no quote for the given date.");
+  //console.log("Sorry, there is no quote for the given date.");
 }
