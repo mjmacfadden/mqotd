@@ -10,7 +10,7 @@ const quoteOfTheDay = [
     date: "March 21, 2023",
     quote: "Stop chasing me!",
     movie: "Catch Me If You Can",
-    src: "https://www.youtube.com/embed/7tZBkOtIYkU?start=13",
+    src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=60",
   },
 ];
 
@@ -28,7 +28,6 @@ const todaysQuote = quoteOfTheDay.find((quote) => quote.date === formattedDate);
 
 // Display the quote of the day on the console
 if (todaysQuote) {
-  //console.log(`Today's quote is from "${todaysQuote.movie}": "${todaysQuote.quote}"`);
   document.getElementById("quote").innerHTML = `"${todaysQuote.quote}"`;
   document.getElementById("date").innerHTML = formattedDate;
   document.getElementById("exampleModalLabel").innerHTML = todaysQuote.movie;
@@ -41,16 +40,26 @@ if (todaysQuote) {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const date = urlParams.get("date");
+console.log(date);
 
 // Find the quote for the given date
 const quote = quoteOfTheDay.find((q) => q.date === date);
 
 // Display the quote on the webpage
 if (quote) {
+  document.getElementById("date").innerHTML = date;
   const quoteText = document.querySelector("#quote");
-  const movieText = document.querySelector("#movie");
+  const movieText = document.querySelector("#exampleModalLabel");
+  const srcText = document.querySelector("#youTube");
+
+  console.log(quoteText);
+  console.log(movieText);
+  console.log(srcText);
+  
   quoteText.textContent = `"${quote.quote}"`;
-  movieText.textContent = `- ${quote.movie}`;
+  movieText.textContent = `${quote.movie}`;
+  srcText.src = `${quote.src}`;
+
 } else {
   console.log("Sorry, there is no quote for the given date.");
 }
