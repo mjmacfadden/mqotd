@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+}
+h2{
+    color:#666;
+}
+#poster{
+    max-height: 600px;
+}
+#error-message{
+    display:none;
+}
+#hint{
+    display: none;
+}
+.hint-exit{
+    float:right;
+}
+#date{
+    font-size:1.2em;
+    font-weight:800;
+}
+#quote{
+    font-family: 'Noto Serif', serif;
+}
+.container{
+    max-width: 600px;;
+}
+.green{
+    background-color: #6aaa64;
+    color:#FFFFFF;
+}
+.green:hover{
+    background-color: #619c5b;
+    color:#FFFFFF;
+}

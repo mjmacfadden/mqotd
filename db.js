@@ -1,16 +1,16 @@
 // Get today's date in the format of "Month day, year"
 const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
-const quoteOfTheDay = [
+const quotesOfTheDay = [
     {
-      date: "April 7, 2023",
+      date: "April 12, 2023",
       quote: "Stop chasing me!",
       movie: "Catch Me If You Can",
       id: 640,
       src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=60",
     },
     {
-      date: "April 6, 2023",
+      date: "April 12, 2023",
       quote: "The most valuable commodity I know of is information. Wouldn't you agree?",
       movie: "Wall Street",
       id: 10673,
@@ -18,13 +18,17 @@ const quoteOfTheDay = [
     },
   ];
   
-  let id;
+
+  const todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
   
-  // Loop through the quoteOfTheDay array
-  for (let i = 0; i < quoteOfTheDay.length; i++) {
+  let id;
+
+  
+  // Loop through the quotesOfTheDay array
+  for (let i = 0; i < quotesOfTheDay.length; i++) {
     // Check if the date property matches today's date
-    if (quoteOfTheDay[i].date === today) {
-      id = quoteOfTheDay[i].id;
+    if (quotesOfTheDay[i].date === today) {
+        id = quotesOfTheDay[i].id;
       // Do something with the ID, e.g. fetch movie data and display it
       break; // exit the loop since we found a match
     }
@@ -36,18 +40,95 @@ const quoteOfTheDay = [
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
-      const title = data.title;
-      const tagline = data.tagline;
-      const runtime = data.runtime;
-      const posterPath = data.poster_path;
-      const posterUrl = 'https://image.tmdb.org/t/p/w500' + posterPath;
-  
-      document.getElementById('title').textContent = title;
-      document.getElementById('tagline').textContent = tagline;
-      document.getElementById('poster').setAttribute('src', posterUrl);
+        console.log(data);
+        const title = data.title;
+        const tagline = data.tagline;
+        const release_date = data.release_date;
+        const runtime = data.runtime;
+        const overview = data.overview;
+        const posterPath = data.poster_path;
+        const posterUrl = 'https://image.tmdb.org/t/p/w500' + posterPath;
+    
+        document.getElementById('title').textContent = title;
+        document.getElementById('poster').setAttribute('src', posterUrl);
+
+    
+        //DISPLAY TODAY'S DATE AND QUOTE
+        document.getElementById('quote').textContent = '\"' + todaysQuote.quote + '\"';
+        document.getElementById('date').textContent = todaysQuote.date;
+
+
+        
+
+        const form = document.getElementById('guess-form');
+        form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        // Get the user's answer from the input box
+        const userAnswer = document.getElementById('guess').value;
+
+        // Check if the user's answer matches the movie title
+        if (userAnswer.toLowerCase() === title.toLowerCase()) {
+            // If the answer is correct, show the "answer" element
+            document.getElementById('answer').style.height = 'auto';
+            document.getElementById('answer').style.opacity = '1';
+            document.getElementById('answer').style.transition = 'opacity .3s';
+            const modal = document.getElementById('answerModal');
+            const modalInstance = new bootstrap.Modal(modal);
+            modalInstance.show();
+            // If the answer is incorrect, show an error message
+            document.getElementById('error-message').style.display = 'none';
+            document.getElementById('error-message').textContent = '';
+            console.log ('foo');
+        } else {
+            // If the answer is incorrect, show an error message
+            console.log ('nope');
+            document.getElementById('error-message').style.display = 'block';
+            document.getElementById('error-message').textContent = 'Sorry, that answer is incorrect. Click above for a hint.';
+            // If the answer is correct, show the "answer" element
+            document.getElementById('answer').style.height = '0';
+            document.getElementById('answer').style.opacity = '0';
+        }
+        });
+
+        const hints = [release_date, runtime, tagline, overview]; // Array of hints
+        let currentHint = 0; // Current hint index
+         const closeButton = '<span aria-hidden="true"><i class="bi bi-x-circle close hint-exit" aria-label="Close" onclick="hideHint()""></i></span>';
+
+        const hintButton = document.getElementById('hint-button');
+
+        hintButton.addEventListener('click', function() {
+            // Your code here
+            console.log('Hint clicked!');
+
+            numberOfHints = numberOfHints + 1;
+            console.log('Number of Hints:' + numberOfHints.toString());
+
+            const hintElement = document.getElementById('hint');
+            hintElement.style.display = 'block'; 
+
+            // Set the hint text to the current hint and increment the counter
+            const hintLabels = ['Release Date:', 'Runtime:', 'Tagline:', 'Overview:']; // Array of hint labels
+            hintElement.innerHTML = closeButton + '<strong>' + hintLabels[currentHint] + '</strong> ' + hints[currentHint];
+
+            currentHint = (currentHint + 1) % hints.length; // Wrap around to the beginning of the array if necessary
+
+          
+        });
+        
+
     })
     .catch(error => {
       console.log(error);
     });
-  
+
+    function hideHint() {
+        const hintElement = document.getElementById('hint');
+        hintElement.style.display = 'none';
+      }
+
+
+var numberOfHints = 0;
+var numberOfGuesses = 0;
+
+

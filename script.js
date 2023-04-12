@@ -7,7 +7,7 @@ const quoteOfTheDay = [
     src: "https://www.youtube.com/embed/7tZBkOtIYkU?start=13&end=20",
   },
   {
-    date: "April 6, 2023",
+    date: "April 12, 2023",
     quote: "Stop chasing me!",
     movie: "Catch Me If You Can",
     id: 550,
@@ -81,10 +81,13 @@ form.addEventListener('submit', function(event) {
 
 //The Movie Database
 const apiKey = 'fe02516c84b34aff3bd02db47d61ec88';
-const movieId = todaysQuote.id; //550; // ID for "Fight Club" movie
+const movieId = todaysQuote.id;
 
 const url = `https://api.themoviedb.org/3/movie/${movieId}/images?api_key=${apiKey}`;
-//const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`;
+const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`;
+
+
+
 
 fetch(url)
   .then(response => response.json())
