@@ -83,6 +83,18 @@ const quotesOfTheDay = [
 
             document.getElementById('guess-count').textcontent = 'numberOfGuesses';
 
+
+            // Get the og:title meta tag
+            var ogTitle = document.querySelector('meta[property="og:title"]');
+            // Set the new title value
+            var newTitle = "Guesses: " + numberOfGuesses.toString() + ", Hints: " + numberOfHints.toString();
+            // Set the content attribute of the og:title meta tag to the new title value
+            ogTitle.setAttribute("content", newTitle);
+
+            
+            // Update the og:title tag with the new title
+
+
             // If the answer is incorrect, show an error message
             document.getElementById('error-message').style.display = 'none';
             document.getElementById('error-message').textContent = '';
@@ -138,7 +150,4 @@ const quotesOfTheDay = [
 
 var numberOfHints = 0;
 var numberOfGuesses = 0;
-
-
-
 
