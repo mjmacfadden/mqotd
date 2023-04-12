@@ -34,3 +34,18 @@ h2{
     background-color: #619c5b;
     color:#FFFFFF;
 }
+.stats{
+    font-size:.8em;
+}
+.results{
+    font-size:2.5em;
+    font-weight:100;
+}
+#title{
+    color:#999999;
+}
+
+#st-1.st-has-labels .st-btn.st-remove-label > span,
+#st-1.st-has-labels .st-btn.st-remove-label{
+    display:inline-block !important;
+}
