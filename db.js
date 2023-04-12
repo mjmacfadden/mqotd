@@ -67,6 +67,10 @@ const quotesOfTheDay = [
         // Get the user's answer from the input box
         const userAnswer = document.getElementById('guess').value;
 
+        numberOfGuesses = numberOfGuesses + 1;
+        console.log('Number of Guesses:' + numberOfGuesses.toString());
+        document.getElementById('guess-count').textContent = numberOfGuesses.toString();
+
         // Check if the user's answer matches the movie title
         if (userAnswer.toLowerCase() === title.toLowerCase()) {
             // If the answer is correct, show the "answer" element
@@ -76,6 +80,9 @@ const quotesOfTheDay = [
             const modal = document.getElementById('answerModal');
             const modalInstance = new bootstrap.Modal(modal);
             modalInstance.show();
+
+            document.getElementById('guess-count').textcontent = 'numberOfGuesses';
+
             // If the answer is incorrect, show an error message
             document.getElementById('error-message').style.display = 'none';
             document.getElementById('error-message').textContent = '';
@@ -103,6 +110,7 @@ const quotesOfTheDay = [
 
             numberOfHints = numberOfHints + 1;
             console.log('Number of Hints:' + numberOfHints.toString());
+            document.getElementById('hint-count').textContent = numberOfHints.toString();
 
             const hintElement = document.getElementById('hint');
             hintElement.style.display = 'block'; 
@@ -130,5 +138,7 @@ const quotesOfTheDay = [
 
 var numberOfHints = 0;
 var numberOfGuesses = 0;
+
+
 
 
