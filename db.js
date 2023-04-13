@@ -3,7 +3,7 @@ const today = new Date().toLocaleDateString("en-US", { month: "long", day: "nume
 
 const quotesOfTheDay = [
     {
-      date: "April 12, 2023",
+      date: "April 13, 2023",
       quote: "Stop chasing me!",
       movie: "Catch Me If You Can",
       id: 640,
@@ -92,7 +92,10 @@ const quotesOfTheDay = [
             ogTitle.setAttribute("content", newTitle);
 
             
-            // Update the og:title tag with the new title
+            // RELOAD SHARE THIS
+            setTimeout(function() {
+                window.__sharethis__.initialize();
+              }, 1000);
 
 
             // If the answer is incorrect, show an error message
