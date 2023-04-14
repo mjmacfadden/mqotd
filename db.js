@@ -97,9 +97,8 @@ const quotesOfTheDay = [
             //    window.__sharethis__.initialize();
             // }, 1000);
             function sendSMS() {
-                var recipient = prompt("Please enter recipient's phone number (including country code):");
                 var message = "Hello World!";
-                var smsUrl = "sms:" + recipient + "?body=" + encodeURIComponent(message);
+                var smsUrl = "sms:?body=" + encodeURIComponent(message);
                 window.location.href = smsUrl;
             }
 
