@@ -3,14 +3,14 @@ const today = new Date().toLocaleDateString("en-US", { month: "long", day: "nume
 
 const quotesOfTheDay = [
     {
-      date: "April 13, 2023",
+      date: "April 14, 2023",
       quote: "Stop chasing me!",
       movie: "Catch Me If You Can",
       id: 640,
       src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=60",
     },
     {
-      date: "April 14, 2023",
+      date: "April 15, 2023",
       quote: "The most valuable commodity I know of is information. Wouldn't you agree?",
       movie: "Wall Street",
       id: 10673,
