@@ -49,13 +49,24 @@ const quotesOfTheDay = [
         const posterPath = data.poster_path;
         const posterUrl = 'https://image.tmdb.org/t/p/w500' + posterPath;
     
-        document.getElementById('title').textContent = title;
+
+        var elements = document.getElementsByClassName('title');
+        for(var i=0; i<elements.length; i++) {
+            elements[i].textContent = title;
+        }
+        var elements = document.getElementsByClassName('overview');
+        for(var i=0; i<elements.length; i++) {
+            elements[i].textContent = overview;
+        }
         document.getElementById('poster').setAttribute('src', posterUrl);
 
     
         //DISPLAY TODAY'S DATE AND QUOTE
         document.getElementById('quote').textContent = '\"' + todaysQuote.quote + '\"';
         document.getElementById('date').textContent = todaysQuote.date;
+
+        //YOUTUBE
+        document.getElementById("youTube").src = todaysQuote.src;
 
 
         
@@ -91,16 +102,6 @@ const quotesOfTheDay = [
             // Set the content attribute of the og:title meta tag to the new title value
             ogTitle.setAttribute("content", newTitle);
 
-            
-            // RELOAD SHARE THIS
-            //setTimeout(function() {
-            //    window.__sharethis__.initialize();
-            // }, 1000);
-            function sendSMS() {
-                var message = "Hello World!";
-                var smsUrl = "sms:?body=" + encodeURIComponent(message);
-                window.location.href = smsUrl;
-            }
 
 
             // If the answer is incorrect, show an error message
@@ -159,9 +160,3 @@ const quotesOfTheDay = [
 var numberOfHints = 0;
 var numberOfGuesses = 0;
 
-
-function sendSMS() {
-    var message = "Hello World!";
-    var smsUrl = "sms:?body=" + encodeURIComponent(message);
-    window.location.href = smsUrl;
-}

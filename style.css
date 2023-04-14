@@ -5,7 +5,7 @@ h2{
     color:#666;
 }
 #poster{
-    max-height: 600px;
+    max-height: 250px;
 }
 #error-message{
     display:none;
@@ -41,11 +41,15 @@ h2{
     font-size:2.5em;
     font-weight:100;
 }
-#title{
+.grey{
     color:#999999;
 }
 
 #st-1.st-has-labels .st-btn.st-remove-label > span,
 #st-1.st-has-labels .st-btn.st-remove-label{
     display:inline-block !important;
+}
+
+.fs-7{
+    font-size:.8rem!important
 }

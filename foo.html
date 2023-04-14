@@ -70,14 +70,20 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title text-center">You Got It! <span id="title">...</span></h5>
+                <h5 class="modal-title text-center">You Got It! <span class="title grey">...</span></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <div id="answer">
-                  <img id="poster" class="img-fluid" src="" />
-
-                  
+                  <div class="row">
+                    <div class="col-4">
+                      <img id="poster" class="img-fluid p-2" src="" />
+                    </div>
+                    <div class="col-8 text-start pr-2">
+                      <h4 class="title pt-2">Movie Title</h4>
+                      <p class="overview grey fs-7">...</p>
+                    </div>
+                  </div>                 
                   
 
                   <div class="row stats">
@@ -87,8 +93,18 @@
                     <div class="col"><span class="results" id="hint-count">0</span><br>Hints</div>
                     <div class="col"></div>
                   </div>
-                  <button class="btn green my-3" onclick="sendSMS()">Share 2 <i class="bi bi-share"></i></button>
-                  <!--<div class="sharethis-inline-share-buttons my-3"></div>-->
+
+                  <div class="row py-3">
+                    <div class="col m-2">
+                      <iframe id="youTube" width="100%" height="250" src="foo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <!-- <button class="btn green my-3" onclick="sendSMS()">Share 2 <i class="bi bi-share"></i></button> -->
+                  
+
+
+                  <div class="sharethis-inline-share-buttons my-3"></div>
+
                 </div>    
               </div>
 
