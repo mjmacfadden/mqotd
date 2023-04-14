@@ -10,7 +10,7 @@ const quotesOfTheDay = [
       src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=60",
     },
     {
-      date: "April 12, 2023",
+      date: "April 14, 2023",
       quote: "The most valuable commodity I know of is information. Wouldn't you agree?",
       movie: "Wall Street",
       id: 10673,
@@ -93,9 +93,15 @@ const quotesOfTheDay = [
 
             
             // RELOAD SHARE THIS
-            setTimeout(function() {
-                window.__sharethis__.initialize();
-              }, 1000);
+            //setTimeout(function() {
+            //    window.__sharethis__.initialize();
+            // }, 1000);
+            function sendSMS() {
+                var recipient = prompt("Please enter recipient's phone number (including country code):");
+                var message = "Hello World!";
+                var smsUrl = "sms:" + recipient + "?body=" + encodeURIComponent(message);
+                window.location.href = smsUrl;
+            }
 
 
             // If the answer is incorrect, show an error message
