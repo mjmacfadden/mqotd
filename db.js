@@ -7,7 +7,7 @@ const quotesOfTheDay = [
       quote: "Stop chasing me!",
       movie: "Catch Me If You Can",
       id: 640,
-      src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=60",
+      src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=65",
     },
     {
       date: "April 15, 2023",
@@ -77,14 +77,16 @@ const quotesOfTheDay = [
 
         // Get the user's answer from the input box
         const userAnswer = document.getElementById('guess').value;
-
-        numberOfGuesses = numberOfGuesses + 1;
+        if (success == false){
+          numberOfGuesses = numberOfGuesses + 1;
+        }
         console.log('Number of Guesses:' + numberOfGuesses.toString());
         document.getElementById('guess-count').textContent = numberOfGuesses.toString();
 
         // Check if the user's answer matches the movie title
-        if (userAnswer.toLowerCase() === title.toLowerCase()) {
+        if (userAnswer.toLowerCase().trim() === title.toLowerCase().trim()) {
             // If the answer is correct, show the "answer" element
+            success = true;
             document.getElementById('answer').style.height = 'auto';
             document.getElementById('answer').style.opacity = '1';
             document.getElementById('answer').style.transition = 'opacity .3s';
@@ -102,7 +104,8 @@ const quotesOfTheDay = [
             // Set the content attribute of the og:title meta tag to the new title value
             ogTitle.setAttribute("content", newTitle);
 
-
+            
+            
 
             // If the answer is incorrect, show an error message
             document.getElementById('error-message').style.display = 'none';
@@ -120,8 +123,10 @@ const quotesOfTheDay = [
         });
 
         const hints = [release_date, runtime, tagline, overview]; // Array of hints
+        const hintsCount = hints.length;
+        var success = false;
         let currentHint = 0; // Current hint index
-         const closeButton = '<span aria-hidden="true"><i class="bi bi-x-circle close hint-exit" aria-label="Close" onclick="hideHint()""></i></span>';
+        const closeButton = '<span aria-hidden="true"><i class="bi bi-x-circle close hint-exit" aria-label="Close" onclick="hideHint()""></i></span>';
 
         const hintButton = document.getElementById('hint-button');
 
@@ -129,7 +134,9 @@ const quotesOfTheDay = [
             // Your code here
             console.log('Hint clicked!');
 
-            numberOfHints = numberOfHints + 1;
+            if (numberOfHints < hintsCount){
+              numberOfHints = numberOfHints + 1;
+            }
             console.log('Number of Hints:' + numberOfHints.toString());
             document.getElementById('hint-count').textContent = numberOfHints.toString();
 
@@ -160,3 +167,6 @@ const quotesOfTheDay = [
 var numberOfHints = 0;
 var numberOfGuesses = 0;
 
+
+
+//YOUTUBE CONTROLS
