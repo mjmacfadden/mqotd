@@ -159,3 +159,9 @@ const quotesOfTheDay = [
 var numberOfHints = 0;
 var numberOfGuesses = 0;
 
+
+function sendSMS() {
+    var message = "Hello World!";
+    var smsUrl = "sms:?body=" + encodeURIComponent(message);
+    window.location.href = smsUrl;
+}
