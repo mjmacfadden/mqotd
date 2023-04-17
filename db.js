@@ -170,17 +170,31 @@ var numberOfGuesses = 0;
 
 
 //WEB SHARE
+const shareButton = document.querySelector('#share-button');
+const imgElement = document.querySelector('#image');
+
 if (navigator.share) {
-  // Web Share API is supported
-  document.getElementById('share-button').addEventListener('click', function() {
-    navigator.share({
-      title: 'Web Share API',
-      text: 'Check out this awesome article on the Web Share API!',
-      url: 'https://example.com/web-share-api',
-      files: [new File(['image'], '3.png', { type: 'image/png', })],
-    })
-    .then(() => console.log('Successful share'))
-    .catch((error) => console.log('Error sharing:', error));
+  shareButton.addEventListener('click', async () => {
+    try {
+      // Fetch the image file and convert it to a Blob
+      const response = await fetch('img/3.png');
+      const blob = await response.blob();
+
+      // Create a new File object from the Blob
+      const file = new File([blob], '3.png', { type: 'image/png' });
+
+      // Share the data including the file
+      await navigator.share({
+        title: 'Web Share API',
+        text: 'Check out this awesome article on the Web Share API!',
+        url: 'https://example.com/web-share-api',
+        files: [file],
+      });
+
+      console.log('Successful share');
+    } catch (error) {
+      console.log('Error sharing:', error);
+    }
   });
 } else {
   // Web Share API is not supported, provide a fallback option
