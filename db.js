@@ -177,18 +177,18 @@ if (navigator.share) {
   shareButton.addEventListener('click', async () => {
     try {
       // Fetch the image file and convert it to a Blob
-      const response = await fetch('og-img.png');
+      const response = await fetch('img/3.png');
       const blob = await response.blob();
 
       // Create a new File object from the Blob
-      const file = new File([blob], 'og-img.png', { type: 'image/png' });
+      const file = new File([blob], '3.png', { type: 'image/png' });
 
       // Share the data including the file
       await navigator.share({
+        title: 'Web Share API',
+        text: 'Check out this awesome article on the Web Share API!',
+        url: 'https://example.com/web-share-api',
         files: [file],
-        title: 'MQOTD',
-        text: 'Guesses: ' + numberOfGuesses.toString() + ', Hint: ' + numberOfGuesses.toString(),
-        url: 'https://mqotd.com',
       });
 
       console.log('Successful share');
