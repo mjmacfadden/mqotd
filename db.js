@@ -169,9 +169,9 @@ var numberOfGuesses = 0;
 
 
 
-//WEB SHARE
+//WEB SHARE API
 const shareButton = document.querySelector('#share-button');
-const imgElement = document.querySelector('#image');
+//const imgElement = document.querySelector('#image');
 
 if (navigator.share) {
   shareButton.addEventListener('click', async () => {
