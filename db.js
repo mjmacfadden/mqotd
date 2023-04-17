@@ -186,9 +186,9 @@ if (navigator.share) {
       // Share the data including the file
       await navigator.share({
         files: [file],
-        title: 'Web Share API',
-        text: 'Check out this awesome article on the Web Share API!',
-        url: 'https://example.com/web-share-api',
+        title: 'MQOTD',
+        text: 'Guesses: ' + numberOfGuesses.toString() + ', Hint: ' + numberOfGuesses.toString(),
+        url: 'https://mqotd.com',
       });
 
       console.log('Successful share');
