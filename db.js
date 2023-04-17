@@ -170,12 +170,24 @@ var numberOfGuesses = 0;
 
 
 //WEB SHARE
-document.getElementById('share-button').addEventListener('click', function() {
-  navigator.share({
-    title: 'Web Share API',
-    text: 'Check out this awesome article on the Web Share API!',
-    url: 'https://example.com/web-share-api'
-  })
-  .then(() => console.log('Successful share'))
-  .catch((error) => console.log('Error sharing:', error));
-});
+if (navigator.share) {
+  // Web Share API is supported
+  document.getElementById('share-button').addEventListener('click', function() {
+    navigator.share({
+      title: 'Web Share API',
+      text: 'Check out this awesome article on the Web Share API!',
+      url: 'https://example.com/web-share-api',
+      files: [new File(['image'], 'img/3.png', { type: 'image/jpeg', })],
+    })
+    .then(() => console.log('Successful share'))
+    .catch((error) => console.log('Error sharing:', error));
+  });
+} else {
+  // Web Share API is not supported, provide a fallback option
+  document.getElementById('share-button').addEventListener('click', function() {
+    const textToCopy = 'Check out this awesome article on the Web Share API!';
+    navigator.clipboard.writeText(textToCopy)
+    .then(() => alert('Text copied to clipboard!'))
+    .catch((error) => console.log('Error copying text:', error));
+  });
+}
