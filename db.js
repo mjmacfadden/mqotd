@@ -4,18 +4,24 @@ const today = new Date().toLocaleDateString("en-US", { month: "long", day: "nume
 const quotesOfTheDay = [
     {
       date: "April 17, 2023",
+      quote: "What, I Thought We Were In The Trust Tree In The Nest, Were We Not?",
+      id: 11635,
+      src: "https://www.youtube.com/embed/umkovqvw714?start=81&end=86",
+    },
+    {
+      date: "April 18, 2023",
       quote: "Stop chasing me!",
-      movie: "Catch Me If You Can",
       id: 640,
       src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=65",
     },
     {
-      date: "April 18, 2023",
+      date: "April 19, 2023",
       quote: "The most valuable commodity I know of is information. Wouldn't you agree?",
-      movie: "Wall Street",
       id: 10673,
       src: "https://www.youtube.com/embed/7tZBkOtIYkU?start=13&end=20",
     },
+
+    
   ];
   
 
@@ -74,7 +80,7 @@ const quotesOfTheDay = [
         const form = document.getElementById('guess-form');
         form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from submitting
-
+ 
         // Get the user's answer from the input box
         const userAnswer = document.getElementById('guess').value;
         if (success == false){
@@ -201,7 +207,7 @@ if (navigator.share) {
   document.getElementById('share-button').addEventListener('click', function() {
     const textToCopy = 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString();
     navigator.clipboard.writeText(textToCopy)
-    .then(() => alert('Copied results to clipboard!'))
+    .then(() => alert('Copied stats to clipboard!'))
     .catch((error) => console.log('Error copying text:', error));
   });
 }
