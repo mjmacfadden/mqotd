@@ -181,7 +181,7 @@ if (navigator.share) {
       const blob = await response.blob();
 
       // Create a new File object from the Blob
-      const file = new File([blob], '3.png', { type: 'image/png' });
+      const file = new File([blob], 'og-img.png', { type: 'image/png' });
 
       // Share the data including the file
       await navigator.share({
