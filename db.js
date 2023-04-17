@@ -177,7 +177,7 @@ if (navigator.share) {
       title: 'Web Share API',
       text: 'Check out this awesome article on the Web Share API!',
       url: 'https://example.com/web-share-api',
-      files: [new File(['./img/3.png'], '3.png', { type: 'image/png' })],
+      files: [new File(['./moviequoteoftheday/img/3.png'], '3.png', { type: 'image/png' })],
     })
     .then(() => console.log('Successful share'))
     .catch((error) => console.log('Error sharing:', error));
