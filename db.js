@@ -186,7 +186,7 @@ if (navigator.share) {
       // Share the data including the file
       await navigator.share({
         title: 'MQOTD',
-        text: 'MQOTD: Guesses' + numberOfGuesses.toString() + 'Hints' + numberOfHints.toString(),
+        text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
         //url: 'https://example.com/web-share-api',
         files: [file],
       });
