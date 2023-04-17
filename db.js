@@ -4,7 +4,7 @@ const today = new Date().toLocaleDateString("en-US", { month: "long", day: "nume
 const quotesOfTheDay = [
     {
       date: "April 17, 2023",
-      quote: "What, I Thought We Were In The Trust Tree In The Nest, Were We Not?",
+      quote: "What, I thought we were in the trust tree in the nest, were we not?",
       id: 11635,
       src: "https://www.youtube.com/embed/umkovqvw714?start=81&end=86",
     },
