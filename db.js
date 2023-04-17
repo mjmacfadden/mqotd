@@ -177,7 +177,7 @@ if (navigator.share) {
       title: 'Web Share API',
       text: 'Check out this awesome article on the Web Share API!',
       url: 'https://example.com/web-share-api',
-      files: [new File(['image'], '3.png', { type: 'image/jpeg', })],
+      files: [new File(['image'], '3.png', { type: 'image/png', })],
     })
     .then(() => console.log('Successful share'))
     .catch((error) => console.log('Error sharing:', error));
@@ -187,7 +187,7 @@ if (navigator.share) {
   document.getElementById('share-button').addEventListener('click', function() {
     const textToCopy = 'Check out this awesome article on the Web Share API!';
     navigator.clipboard.writeText(textToCopy)
-    .then(() => alert('Text copied to clipboard!'))
+    .then(() => alert('Copied results to clipboard!'))
     .catch((error) => console.log('Error copying text:', error));
   });
 }
