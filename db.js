@@ -187,7 +187,7 @@ if (navigator.share) {
       await navigator.share({
         title: 'MQOTD',
         text: 'MQOTD: Guesses' + numberOfGuesses.toString() + 'Hints' + numberOfHints.toString(),
-        url: 'https://example.com/web-share-api',
+        //url: 'https://example.com/web-share-api',
         files: [file],
       });
 
