@@ -177,7 +177,7 @@ if (navigator.share) {
   shareButton.addEventListener('click', async () => {
     try {
       // Fetch the image file and convert it to a Blob
-      const response = await fetch('img/3.png');
+      const response = await fetch('og-img.png');
       const blob = await response.blob();
 
       // Create a new File object from the Blob
