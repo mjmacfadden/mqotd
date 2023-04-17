@@ -3,7 +3,7 @@ const today = new Date().toLocaleDateString("en-US", { month: "long", day: "nume
 
 const quotesOfTheDay = [
     {
-      date: "April 14, 2023",
+      date: "April 17, 2023",
       quote: "Stop chasing me!",
       movie: "Catch Me If You Can",
       id: 640,
@@ -169,4 +169,13 @@ var numberOfGuesses = 0;
 
 
 
-//YOUTUBE CONTROLS
+//WEB SHARE
+document.getElementById('share-button').addEventListener('click', function() {
+  navigator.share({
+    title: 'Web Share API',
+    text: 'Check out this awesome article on the Web Share API!',
+    url: 'https://example.com/web-share-api'
+  })
+  .then(() => console.log('Successful share'))
+  .catch((error) => console.log('Error sharing:', error));
+});
