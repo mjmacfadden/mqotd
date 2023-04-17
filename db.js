@@ -186,7 +186,7 @@ if (navigator.share) {
       // Share the data including the file
       await navigator.share({
         title: 'MQOTD',
-        text: 'Guesses' + numberOfGuesses.toString() + 'Hints' + numberOfHints.toString(),
+        text: 'MQOTD: Guesses' + numberOfGuesses.toString() + 'Hints' + numberOfHints.toString(),
         url: 'https://example.com/web-share-api',
         files: [file],
       });
@@ -199,7 +199,7 @@ if (navigator.share) {
 } else {
   // Web Share API is not supported, provide a fallback option
   document.getElementById('share-button').addEventListener('click', function() {
-    const textToCopy = text;
+    const textToCopy = 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString();
     navigator.clipboard.writeText(textToCopy)
     .then(() => alert('Copied results to clipboard!'))
     .catch((error) => console.log('Error copying text:', error));
