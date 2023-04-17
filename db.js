@@ -10,7 +10,7 @@ const quotesOfTheDay = [
       src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=65",
     },
     {
-      date: "April 15, 2023",
+      date: "April 18, 2023",
       quote: "The most valuable commodity I know of is information. Wouldn't you agree?",
       movie: "Wall Street",
       id: 10673,
@@ -171,7 +171,7 @@ var numberOfGuesses = 0;
 
 //WEB SHARE API
 const shareButton = document.querySelector('#share-button');
-//const imgElement = document.querySelector('#image');
+const imgElement = document.querySelector('#image');
 
 if (navigator.share) {
   shareButton.addEventListener('click', async () => {
