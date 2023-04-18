@@ -1,12 +1,97 @@
+/*
+=================================================
+GLOBAL
+=================================================
+*/
+html,body{
+    height:100%;
+}
+html{
+    background-color: rgb(13,14,24);
+}
 body{
     text-align: center;
+    
+    background: linear-gradient(0deg, rgba(13,14,24,1) 0%, rgba(39,42,70,1) 100%);
+    background-image: url('img/movie-poster-bg.png');    
+}
+.primary{
+    color:#7affc8;
+}
+.btn{
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
+}
+.btn-primary,
+.btn-primary:active{
+    background-color:#7affc8 !important;
+    color:#272a46 !important;
+    border-color:#71eeba !important;
+}
+.btn-primary:hover{
+    background-color:#6ae1af !important;
+    color:#0d0e18;
+    border-color:#71eeba;
+}
+.btn-secondary,
+.btn-secondary:active{
+    background-color:#00c3ff;
+    border-color:#00b0e6;
+}
+.btn-secondary:hover{
+    background-color:#00b0e6 !important;
+    border-color:#00b0e6;
+}
+.gradient-text {
+    background-color: #7affc8;
+    background-image: linear-gradient(90deg, #00c3ff, #7affc8);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+/*
+=================================================
+NAVBAR
+=================================================
+*/
+.navbar{
+    border-bottom:1px solid rgba(255, 255, 255, 0.5); 
+    background:#0d0e18;
+}
+.logo{
+    font-weight:700;
+    margin-left:20px;
+}
+
+/*
+=================================================
+TYPOGRAPHY
+=================================================
+*/
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
 }
 h2{
     color:#666;
 }
+
+/*
+=================================================
+MODAL
+=================================================
+*/
 #poster{
     max-height: 250px;
 }
+
+/*
+=================================================
+UI/UX
+=================================================
+*/
 #error-message{
     display:none;
 }
@@ -17,11 +102,14 @@ h2{
     float:right;
 }
 #date{
-    font-size:1.2em;
+    font-size:1.6em;
     font-weight:800;
 }
 #quote{
-    font-family: 'Noto Serif', serif;
+    font-family: 'Courier Prime', monospace;
+    font-size:2.3em;
+    color:#FFF;
+    padding:50px 0;
 }
 .container{
     max-width: 600px;;
@@ -59,10 +147,23 @@ h2{
     right:5px;
     top:5px;
 }
+/*
+=================================================
+FOOTER
+=================================================
+*/
+.footer{
+    position:absolute;
+    bottom:0;
+    opacity:.75;
+}
+.tmdb{
+    width:150px;
+}
 
 /*
 =================================================
-Suggestion Engine
+SUGGESTION ENGINE
 =================================================
 */
 #guess-form{
@@ -75,6 +176,7 @@ Suggestion Engine
     background-color: #fff;
     z-index: 999;
     border: 1px solid #ccc;
+    color:#0d0e18;
   }
   
   #suggestions ul {
