@@ -40,9 +40,63 @@ const quotesOfTheDay = [
     }
   }
   
+  //THE MOVIE DATABASE MAGIC
   const apiKey = 'fe02516c84b34aff3bd02db47d61ec88';
   const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
+
+  //SUGGESTIONS ENGINE
+  const searchInput = document.getElementById('guess');
+  const suggestionsList = document.getElementById('suggestions');
+
+  let addedTitles = []; // keep track of the titles that have already been added to the list
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value;
+
+    // Clear any previous suggestions and the addedTitles array
+    suggestionsList.innerHTML = '';
+    addedTitles = [];
+
+    // Make a request to the Movie Database API to get movie suggestions based on the user input
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&language=en-US&page=1&include_adult=false`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const results = data.results.slice(0, 3); // Get the top 3 results
+
+        // Create a list item for each suggestion and append it to the suggestions list if its title has not already been added
+        results.forEach(movie => {
+          if (!addedTitles.includes(movie.title) && addedTitles.length < 3) {
+            const listItem = document.createElement('li');
+            listItem.textContent = movie.title;
+            suggestionsList.appendChild(listItem);
+            addedTitles.push(movie.title);
+          }
+        });
+
+        // Display the suggestions list if there are suggestions, hide it otherwise
+        if (addedTitles.length > 0) {
+          suggestionsList.style.display = 'block';
+        } else {
+          suggestionsList.style.display = 'none';
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  });
+
+// When a suggestion is clicked, populate the search input with the movie title and hide the suggestions list
+suggestionsList.addEventListener('click', event => {
+  const clickedItem = event.target;
+  const selectedTitle = clickedItem.textContent;
+  searchInput.value = selectedTitle;
+  suggestionsList.style.display = 'none';
+});
   
+
+  //DAILY DATA STUFF
   fetch(url)
     .then(response => response.json())
     .then(data => {
