@@ -47,6 +47,7 @@ const quotesOfTheDay = [
   //SUGGESTIONS ENGINE
   const searchInput = document.getElementById('guess');
   const suggestionsList = document.getElementById('suggestions');
+  const container = document.getElementById('guess-form');
 
   let addedTitles = []; // keep track of the titles that have already been added to the list
 
@@ -87,14 +88,20 @@ const quotesOfTheDay = [
       });
   });
 
-// When a suggestion is clicked, populate the search input with the movie title and hide the suggestions list
-suggestionsList.addEventListener('click', event => {
-  const clickedItem = event.target;
-  const selectedTitle = clickedItem.textContent;
-  searchInput.value = selectedTitle;
-  suggestionsList.style.display = 'none';
-});
+  // When a suggestion is clicked, populate the search input with the movie title and hide the suggestions list
+  suggestionsList.addEventListener('click', event => {
+    const clickedItem = event.target;
+    const selectedTitle = clickedItem.textContent;
+    searchInput.value = selectedTitle;
+    suggestionsList.style.display = 'none';
+  });
   
+  // Hide the suggestions box when the user clicks outside of it
+  document.addEventListener('click', event => {
+    if (!container.contains(event.target)) {
+      suggestionsList.style.display = 'none';
+    }
+  });
 
   //DAILY DATA STUFF
   fetch(url)
