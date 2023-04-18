@@ -87,6 +87,7 @@ Suggestion Engine
     padding: 10px;
     cursor: pointer;
     list-style:none;
+    text-align:left;
   }
   
   #suggestions li:hover {
