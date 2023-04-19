@@ -1,29 +1,67 @@
+const quotesOfTheDay = [
+  /*
+  {
+    date: "April , 2023",
+    quote: "",
+    id: ,
+    src: "",
+  },
+  */ 
+
+  {
+    date: "April 23, 2023",
+    quote: "Put your confidence in myself and J.T. Marlin... and I'm telling you, you will never have to ask for it again",
+    id: 14181,
+    src: "https://www.youtube.com/embed/FP28lB0I0pE?start=17&end=25",
+  },
+  {
+    date: "April 22, 2023",
+    quote: "Human sacrifice, dogs and cats living together... MASS HYSTERIA!",
+    id: 620,
+    src: "https://www.youtube.com/embed/qx73vTi5aFo?start=22&end=36",
+  }, 
+  {
+    date: "April 21, 2023",
+    quote: "If peeing your pants is cool, consider me Miles Davis.",
+    id: 11017,
+    src: "https://www.youtube.com/embed/siCNdfH9U40?",
+  },
+  {
+    date: "April 20, 2023",
+    quote: "We have a pool and a pond.  A pond would be good for you.",
+    id: 11977,
+    src: "https://www.youtube.com/embed/9tFNbncymjY?end=11",
+  },
+  {
+    date: "April 19, 2023",
+    quote: "The most valuable commodity I know of is information. Wouldn't you agree?",
+    id: 10673,
+    src: "https://www.youtube.com/embed/7tZBkOtIYkU?start=13&end=20",
+  },
+  {
+    date: "April 18, 2023",
+    quote: "Stop chasing me!",
+    id: 640,
+    src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=65",
+  },
+  {
+    date: "April 17, 2023",
+    quote: "What, I thought we were in the trust tree in the nest, were we not?",
+    id: 11635,
+    src: "https://www.youtube.com/embed/umkovqvw714?start=81&end=86",
+  },    
+  {
+    date: "April 16, 2023",
+    quote: "Who would steal thirty bagged lunches?",
+    id: 11017,
+    src: "https://www.youtube.com/embed/x5bVrHiPSzw?end=13",
+  },
+];
+
+
 // Get today's date in the format of "Month day, year"
 const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
-const quotesOfTheDay = [
-    {
-      date: "April 17, 2023",
-      quote: "What, I thought we were in the trust tree in the nest, were we not?",
-      id: 11635,
-      src: "https://www.youtube.com/embed/umkovqvw714?start=81&end=86",
-    },
-    {
-      date: "April 18, 2023",
-      quote: "Stop chasing me!",
-      id: 640,
-      src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=65",
-    },
-    {
-      date: "April 19, 2023",
-      quote: "The most valuable commodity I know of is information. Wouldn't you agree?",
-      id: 10673,
-      src: "https://www.youtube.com/embed/7tZBkOtIYkU?start=13&end=20",
-    },
-
-    
-  ];
-  
 
   const todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
   
@@ -234,7 +272,11 @@ const quotesOfTheDay = [
 var numberOfHints = 0;
 var numberOfGuesses = 0;
 
-
+//STOP YOUTUBE VIDEO WHEN MODAL CLOSES
+var myModal = document.getElementById('answerModal');
+myModal.addEventListener('hide.bs.modal', function (event){
+  document.getElementById("youTube").src = todaysQuote.src;
+})
 
 //WEB SHARE API
 const shareButton = document.querySelector('#share-button');
@@ -244,11 +286,11 @@ if (navigator.share) {
   shareButton.addEventListener('click', async () => {
     try {
       // Fetch the image file and convert it to a Blob
-      const response = await fetch('img/og-img.png');
+      const response = await fetch('img/results/G1H0.png');
       const blob = await response.blob();
 
       // Create a new File object from the Blob
-      const file = new File([blob], 'og-img.png', { type: 'image/png' });
+      const file = new File([blob], 'results.png', { type: 'image/png' });
 
       // Share the data including the file
       await navigator.share({
