@@ -287,8 +287,10 @@ if (navigator.share) {
     try {
       // Fetch the image file and convert it to a Blob
       if (numberOfGuesses == 1 && numberOfHints == 0){
-        const response = await fetch('img/results/G1H0.png');
-      }else{const response = await fetch('img/results/G2H2.png');}
+        var response = await fetch('img/results/G1H0.png');
+      } else{
+        var response = await fetch('img/results/G2H2.png');
+      }
       const blob = await response.blob();
 
       // Create a new File object from the Blob
