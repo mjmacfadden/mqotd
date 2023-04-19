@@ -300,13 +300,85 @@ if (navigator.share) {
         var response = await fetch('img/results/G1H5.png');
       } else if(numberOfGuesses == 1 && numberOfHints > 5){
         var response = await fetch('img/results/G1H5+.png');
-      } else{
+      } else if(numberOfGuesses == 2 && numberOfHints == 0){
+        var response = await fetch('img/results/G2H0.png');
+      } else if(numberOfGuesses == 2 && numberOfHints == 1){
+        var response = await fetch('img/results/G2H1.png');
+      } else if(numberOfGuesses == 2 && numberOfHints == 2){
+        var response = await fetch('img/results/G2H2.png');
+      } else if(numberOfGuesses == 2 && numberOfHints == 3){
+        var response = await fetch('img/results/G2H3.png');
+      } else if(numberOfGuesses == 2 && numberOfHints == 4){
+        var response = await fetch('img/results/G2H4.png');
+      } else if(numberOfGuesses == 2 && numberOfHints == 5){
+        var response = await fetch('img/results/G2H5.png');
+      } else if(numberOfGuesses == 2 && numberOfHints > 5){
+        var response = await fetch('img/results/G2H5+.png');
+      } else if(numberOfGuesses == 3 && numberOfHints == 0){
+        var response = await fetch('img/results/G3H0.png');
+      } else if(numberOfGuesses == 3 && numberOfHints == 1){
+        var response = await fetch('img/results/G3H1.png');
+      } else if(numberOfGuesses == 3 && numberOfHints == 2){
+        var response = await fetch('img/results/G3H2.png');
+      } else if(numberOfGuesses == 3 && numberOfHints == 3){
+        var response = await fetch('img/results/G3H3.png');
+      } else if(numberOfGuesses == 3 && numberOfHints == 4){
+        var response = await fetch('img/results/G3H4.png');
+      } else if(numberOfGuesses == 3 && numberOfHints == 5){
+        var response = await fetch('img/results/G3H5.png');
+      } else if(numberOfGuesses == 3 && numberOfHints > 5){
+        var response = await fetch('img/results/G3H5+.png');
+      } else if(numberOfGuesses == 4 && numberOfHints == 0){
+        var response = await fetch('img/results/G4H0.png');
+      } else if(numberOfGuesses == 4 && numberOfHints == 1){
+        var response = await fetch('img/results/G4H1.png');
+      } else if(numberOfGuesses == 4 && numberOfHints == 2){
+        var response = await fetch('img/results/G4H2.png');
+      } else if(numberOfGuesses == 4 && numberOfHints == 3){
+        var response = await fetch('img/results/G4H3.png');
+      } else if(numberOfGuesses == 4 && numberOfHints == 4){
+        var response = await fetch('img/results/G4H4.png');
+      } else if(numberOfGuesses == 4 && numberOfHints == 5){
+        var response = await fetch('img/results/G4H5.png');
+      } else if(numberOfGuesses == 4 && numberOfHints > 5){
+        var response = await fetch('img/results/G4H5+.png');
+      } else if(numberOfGuesses == 5 && numberOfHints == 0){
+        var response = await fetch('img/results/G5H0.png');
+      } else if(numberOfGuesses == 5 && numberOfHints == 1){
+        var response = await fetch('img/results/G5H1.png');
+      } else if(numberOfGuesses == 5 && numberOfHints == 2){
+        var response = await fetch('img/results/G5H2.png');
+      } else if(numberOfGuesses == 5 && numberOfHints == 3){
+        var response = await fetch('img/results/G5H3.png');
+      } else if(numberOfGuesses == 5 && numberOfHints == 4){
+        var response = await fetch('img/results/G5H4.png');
+      } else if(numberOfGuesses == 5 && numberOfHints == 5){
+        var response = await fetch('img/results/G5H5.png');
+      } else if(numberOfGuesses == 5 && numberOfHints > 5){
+        var response = await fetch('img/results/G5H5+.png');
+      } else if(numberOfGuesses > 5 && numberOfHints == 0){
+        var response = await fetch('img/results/G5+H0.png');
+      } else if(numberOfGuesses > 5 && numberOfHints == 1){
+        var response = await fetch('img/results/G5+H1.png');
+      } else if(numberOfGuesses > 5 && numberOfHints == 2){
+        var response = await fetch('img/results/G5+H2.png');
+      } else if(numberOfGuesses > 5 && numberOfHints == 3){
+        var response = await fetch('img/results/G5+H3.png');
+      } else if(numberOfGuesses > 5 && numberOfHints == 4){
+        var response = await fetch('img/results/G5+H4.png');
+      } else if(numberOfGuesses > 5 && numberOfHints == 5){
+        var response = await fetch('img/results/G5+H5.png');
+      } else if(numberOfGuesses > 5 && numberOfHints > 5){
+        var response = await fetch('img/results/G5+H5+.png');
+      }
+      
+      else{
         var response = await fetch('img/results/G5+H5+.png');
       }
       const blob = await response.blob();
 
       // Create a new File object from the Blob
-      const file = new File([blob], 'results.png', { type: 'image/png' });
+      const file = new File([blob], 'MQOTD.png', { type: 'image/png' });
 
       // Share the data including the file
       await navigator.share({
