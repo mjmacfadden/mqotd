@@ -1,13 +1,4 @@
 const quotesOfTheDay = [
-  /*
-  {
-    date: "April , 2023",
-    quote: "",
-    id: ,
-    src: "",
-  },
-  */ 
-
   {
     date: "April 23, 2023",
     quote: "Put your confidence in myself and J.T. Marlin... and I'm telling you, you will never have to ask for it again",
@@ -370,9 +361,7 @@ if (navigator.share) {
         var response = await fetch('img/results/G5+H5.png');
       } else if(numberOfGuesses > 5 && numberOfHints > 5){
         var response = await fetch('img/results/G5+H5+.png');
-      }
-      
-      else{
+      } else{
         var response = await fetch('img/results/G5+H5+.png');
       }
       const blob = await response.blob();
