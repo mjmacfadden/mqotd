@@ -113,12 +113,12 @@ UI/UX
   float: right;
 }
 #date {
-  font-size: 1.6em;
+  font-size: 1.2em;
   font-weight: 800;
 }
 #quote {
   font-family: "Courier Prime", monospace;
-  font-size: 2.3em;
+  font-size: 2.1em;
   color: #fff;
   padding: 20px 0 50px 0;
 }
@@ -164,8 +164,7 @@ FOOTER
 =================================================
 */
 .footer {
-  position: absolute;
-  bottom: 0;
+  margin-top: 50px;
   opacity: 0.75;
 }
 .tmdb {
