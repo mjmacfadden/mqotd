@@ -19,7 +19,7 @@ body {
     rgba(39, 42, 70, 1) 100%
   );
   background-image: url("img/movie-poster.png");
-  background-position-y: 75px;
+  background-position-y: 58px;
 }
 .primary {
   color: #7affc8;
