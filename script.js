@@ -288,8 +288,12 @@ if (navigator.share) {
       // Fetch the image file and convert it to a Blob
       if (numberOfGuesses == 1 && numberOfHints == 0){
         var response = await fetch('img/results/G1H0.png');
+      } else if(numberOfGuesses == 1 && numberOfHints == 2){
+        var response = await fetch('img/results/G1H2.png');
+      } else if(numberOfGuesses == 1 && numberOfHints == 3){
+        var response = await fetch('img/results/G1H3.png');
       } else{
-        var response = await fetch('img/results/G2H2.png');
+        var response = await fetch('img/results/G5+H5+.png');
       }
       const blob = await response.blob();
 
