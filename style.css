@@ -18,7 +18,7 @@ body {
     rgba(13, 14, 24, 1) 0%,
     rgba(39, 42, 70, 1) 100%
   );
-  background-image: url("img/movie-poster-bg.png");
+  background-image: url("img/movie-poster.png");
   background-position-y: 75px;
 }
 .primary {
