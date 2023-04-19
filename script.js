@@ -288,10 +288,18 @@ if (navigator.share) {
       // Fetch the image file and convert it to a Blob
       if (numberOfGuesses == 1 && numberOfHints == 0){
         var response = await fetch('img/results/G1H0.png');
+      } else if(numberOfGuesses == 1 && numberOfHints == 1){
+        var response = await fetch('img/results/G1H1.png');
       } else if(numberOfGuesses == 1 && numberOfHints == 2){
         var response = await fetch('img/results/G1H2.png');
       } else if(numberOfGuesses == 1 && numberOfHints == 3){
         var response = await fetch('img/results/G1H3.png');
+      } else if(numberOfGuesses == 1 && numberOfHints == 4){
+        var response = await fetch('img/results/G1H4.png');
+      } else if(numberOfGuesses == 1 && numberOfHints == 5){
+        var response = await fetch('img/results/G1H5.png');
+      } else if(numberOfGuesses == 1 && numberOfHints > 5){
+        var response = await fetch('img/results/G1H5+.png');
       } else{
         var response = await fetch('img/results/G5+H5+.png');
       }
