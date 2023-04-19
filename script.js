@@ -286,7 +286,9 @@ if (navigator.share) {
   shareButton.addEventListener('click', async () => {
     try {
       // Fetch the image file and convert it to a Blob
-      const response = await fetch('img/results/G1H0.png');
+      if (numberOfGuesses == 1 && numberOfHints == 0){
+        const response = await fetch('img/results/G1H0.png');
+      }else{const response = await fetch('img/results/G2H2.png');}
       const blob = await response.blob();
 
       // Create a new File object from the Blob
@@ -295,7 +297,7 @@ if (navigator.share) {
       // Share the data including the file
       await navigator.share({
         title: 'MQOTD',
-        text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
+        //text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
         //url: 'https://example.com/web-share-api',
         files: [file],
       });
