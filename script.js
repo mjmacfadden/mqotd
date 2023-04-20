@@ -1,4 +1,10 @@
 const quotesOfTheDay = [
+    {
+    date: "April 24, 2023",
+    quote: "It's a bold strategy Cotton, let's see if it pays off for 'em",
+    id: 9472,
+    src: "https://www.youtube.com/embed/9HVejEB5uVk",
+  },
   {
     date: "April 23, 2023",
     quote: "Put your confidence in myself and J.T. Marlin... and I'm telling you, you will never have to ask for it again",
