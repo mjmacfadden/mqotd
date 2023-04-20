@@ -19,7 +19,7 @@ body {
     rgba(39, 42, 70, 1) 100%
   );
   background-image: url("img/movie-poster.png");
-  background-position-y: 58px;
+  background-position-y: 50px;
 }
 .primary {
   color: #7affc8;
@@ -62,13 +62,16 @@ body {
 NAVBAR
 =================================================
 */
-.navbar {
+.navigation{
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background: #0d0e18;
 }
 .logo {
   font-weight: 700;
-  margin-left: 20px;
+  float:left;
+}
+.settings{
+  cursor: pointer;
 }
 
 /*
