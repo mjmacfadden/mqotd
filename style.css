@@ -91,6 +91,9 @@ h6 {
 h2 {
   color: #666;
 }
+.smallest{
+  font-size:.6em;
+}
 
 /*
 =================================================
@@ -172,6 +175,7 @@ FOOTER
 }
 .tmdb {
   width: 150px;
+  margin:10px auto;
 }
 
 /*

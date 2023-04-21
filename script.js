@@ -60,210 +60,234 @@ const quotesOfTheDay = [
 const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
 
-  const todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
-  
-  let id;
+const todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
 
-  
-  // Loop through the quotesOfTheDay array
-  for (let i = 0; i < quotesOfTheDay.length; i++) {
-    // Check if the date property matches today's date
-    if (quotesOfTheDay[i].date === today) {
-        id = quotesOfTheDay[i].id;
-      // Do something with the ID, e.g. fetch movie data and display it
-      break; // exit the loop since we found a match
-    }
+let id;
+
+
+// Loop through the quotesOfTheDay array
+for (let i = 0; i < quotesOfTheDay.length; i++) {
+  // Check if the date property matches today's date
+  if (quotesOfTheDay[i].date === today) {
+      id = quotesOfTheDay[i].id;
+    // Do something with the ID, e.g. fetch movie data and display it
+    break; // exit the loop since we found a match
   }
+}
+
+//THE MOVIE DATABASE MAGIC
+const apiKey = 'fe02516c84b34aff3bd02db47d61ec88';
+const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
+
+//SUGGESTIONS ENGINE
+const searchInput = document.getElementById('guess');
+const suggestionsList = document.getElementById('suggestions');
+const container = document.getElementById('guess-form');
+
+let addedTitles = []; // keep track of the titles that have already been added to the list
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value;
+
+  // Clear any previous suggestions and the addedTitles array
+  suggestionsList.innerHTML = '';
+  addedTitles = [];
+
+  // Make a request to the Movie Database API to get movie suggestions based on the user input
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&language=en-US&page=1&include_adult=false`;
   
-  //THE MOVIE DATABASE MAGIC
-  const apiKey = 'fe02516c84b34aff3bd02db47d61ec88';
-  const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
-
-  //SUGGESTIONS ENGINE
-  const searchInput = document.getElementById('guess');
-  const suggestionsList = document.getElementById('suggestions');
-  const container = document.getElementById('guess-form');
-
-  let addedTitles = []; // keep track of the titles that have already been added to the list
-
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value;
-
-    // Clear any previous suggestions and the addedTitles array
-    suggestionsList.innerHTML = '';
-    addedTitles = [];
-
-    // Make a request to the Movie Database API to get movie suggestions based on the user input
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&language=en-US&page=1&include_adult=false`;
-
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        const results = data.results.slice(0, 3); // Get the top 3 results
-
-        // Create a list item for each suggestion and append it to the suggestions list if its title has not already been added
-        results.forEach(movie => {
-          if (!addedTitles.includes(movie.title) && addedTitles.length < 3) {
-            const listItem = document.createElement('li');
-            listItem.textContent = movie.title;
-            suggestionsList.appendChild(listItem);
-            addedTitles.push(movie.title);
-          }
-        });
-
-        // Display the suggestions list if there are suggestions, hide it otherwise
-        if (addedTitles.length > 0) {
-          suggestionsList.style.display = 'block';
-        } else {
-          suggestionsList.style.display = 'none';
-        }
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  });
-
-  // When a suggestion is clicked, populate the search input with the movie title and hide the suggestions list
-  suggestionsList.addEventListener('click', event => {
-    const clickedItem = event.target;
-    const selectedTitle = clickedItem.textContent;
-    searchInput.value = selectedTitle;
-    suggestionsList.style.display = 'none';
-  });
-  
-  // Hide the suggestions box when the user clicks outside of it
-  document.addEventListener('click', event => {
-    if (!container.contains(event.target)) {
-      suggestionsList.style.display = 'none';
-    }
-  });
-
-  //DAILY DATA STUFF
   fetch(url)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
-        const title = data.title;
-        const tagline = data.tagline;
-        const release_date = data.release_date;
-        const runtime = data.runtime;
-        const overview = data.overview;
-        const posterPath = data.poster_path;
-        const posterUrl = 'https://image.tmdb.org/t/p/w500' + posterPath;
-    
+      const results = data.results.slice(0, 3); // Get the top 3 results
 
-        var elements = document.getElementsByClassName('title');
-        for(var i=0; i<elements.length; i++) {
-            elements[i].textContent = title;
+      // Create a list item for each suggestion and append it to the suggestions list if its title has not already been added
+      results.forEach(movie => {
+        if (!addedTitles.includes(movie.title) && addedTitles.length < 3) {
+          const listItem = document.createElement('li');
+          listItem.textContent = movie.title;
+          suggestionsList.appendChild(listItem);
+          addedTitles.push(movie.title);
         }
-        var elements = document.getElementsByClassName('overview');
-        for(var i=0; i<elements.length; i++) {
-            elements[i].textContent = overview;
-        }
-        document.getElementById('poster').setAttribute('src', posterUrl);
+      });
 
-    
-        //DISPLAY TODAY'S DATE AND QUOTE
-        document.getElementById('quote').textContent = '\"' + todaysQuote.quote + '\"';
-        document.getElementById('date').textContent = todaysQuote.date;
-
-        //YOUTUBE
-        document.getElementById("youTube").src = todaysQuote.src;
-
-
-        
-
-        const form = document.getElementById('guess-form');
-        form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting
- 
-        // Get the user's answer from the input box
-        const userAnswer = document.getElementById('guess').value;
-        if (success == false){
-          numberOfGuesses = numberOfGuesses + 1;
-        }
-        console.log('Number of Guesses:' + numberOfGuesses.toString());
-        document.getElementById('guess-count').textContent = numberOfGuesses.toString();
-
-        // Check if the user's answer matches the movie title
-        if (userAnswer.toLowerCase().trim() === title.toLowerCase().trim()) {
-            // If the answer is correct, show the "answer" element
-            success = true;
-            document.getElementById('answer').style.height = 'auto';
-            document.getElementById('answer').style.opacity = '1';
-            document.getElementById('answer').style.transition = 'opacity .3s';
-            const modal = document.getElementById('answerModal');
-            const modalInstance = new bootstrap.Modal(modal);
-            modalInstance.show();
-
-            document.getElementById('guess-count').textcontent = 'numberOfGuesses';
-
-
-            // Get the og:title meta tag
-            var ogTitle = document.querySelector('meta[property="og:title"]');
-            // Set the new title value
-            var newTitle = "Guesses: " + numberOfGuesses.toString() + ", Hints: " + numberOfHints.toString();
-            // Set the content attribute of the og:title meta tag to the new title value
-            ogTitle.setAttribute("content", newTitle);
-
-            
-            
-
-            // If the answer is incorrect, show an error message
-            document.getElementById('error-message').style.display = 'none';
-            document.getElementById('error-message').textContent = '';
-            console.log ('foo');
-        } else {
-            // If the answer is incorrect, show an error message
-            console.log ('nope');
-            document.getElementById('error-message').style.display = 'block';
-            document.getElementById('error-message').textContent = 'Sorry, that answer is incorrect. Click above for a hint.';
-            // If the answer is correct, show the "answer" element
-            document.getElementById('answer').style.height = '0';
-            document.getElementById('answer').style.opacity = '0';
-        }
-        });
-
-        const hints = [release_date, runtime, tagline, overview]; // Array of hints
-        const hintsCount = hints.length;
-        var success = false;
-        let currentHint = 0; // Current hint index
-        const closeButton = '<span aria-hidden="true"><i class="bi bi-x-circle close hint-exit" aria-label="Close" onclick="hideHint()""></i></span>';
-
-        const hintButton = document.getElementById('hint-button');
-
-        hintButton.addEventListener('click', function() {
-            // Your code here
-            console.log('Hint clicked!');
-
-            if (numberOfHints < hintsCount){
-              numberOfHints = numberOfHints + 1;
-            }
-            console.log('Number of Hints:' + numberOfHints.toString());
-            document.getElementById('hint-count').textContent = numberOfHints.toString();
-
-            const hintElement = document.getElementById('hint');
-            hintElement.style.display = 'block'; 
-
-            // Set the hint text to the current hint and increment the counter
-            const hintLabels = ['Release Date:', 'Runtime:', 'Tagline:', 'Overview:']; // Array of hint labels
-            hintElement.innerHTML = closeButton + '<strong>' + hintLabels[currentHint] + '</strong> ' + hints[currentHint];
-
-            currentHint = (currentHint + 1) % hints.length; // Wrap around to the beginning of the array if necessary
-
-          
-        });
-        
-
+      // Display the suggestions list if there are suggestions, hide it otherwise
+      if (addedTitles.length > 0) {
+        suggestionsList.style.display = 'block';
+      } else {
+        suggestionsList.style.display = 'none';
+      }
     })
     .catch(error => {
-      console.log(error);
+      console.error(error);
     });
+});
 
-    function hideHint() {
-        const hintElement = document.getElementById('hint');
-        hintElement.style.display = 'none';
+// When a suggestion is clicked, populate the search input with the movie title and hide the suggestions list
+suggestionsList.addEventListener('click', event => {
+  const clickedItem = event.target;
+  const selectedTitle = clickedItem.textContent;
+  searchInput.value = selectedTitle;
+  suggestionsList.style.display = 'none';
+});
+
+// Hide the suggestions box when the user clicks outside of it
+document.addEventListener('click', event => {
+  if (!container.contains(event.target)) {
+    suggestionsList.style.display = 'none';
+  }
+});
+
+
+
+let cast = [];
+
+//DAILY DATA STUFF
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);
+      const title = data.title;
+      const tagline = data.tagline;
+      const release_date = data.release_date;
+      const genre = data.genres.map(genre => genre.name);
+      const runtime = data.runtime;
+      const overview = data.overview;
+      const posterPath = data.poster_path;
+      const posterUrl = 'https://image.tmdb.org/t/p/w500' + posterPath;
+
+
+       // Cast
+       fetch(`https://api.themoviedb.org/3/movie/${data.id}/credits?api_key=${apiKey}&language=en-US`)
+       .then(response => response.json())
+       .then(credits => {
+          console.log(credits);
+          cast = credits.cast.slice(0, 5).map(cast => cast.name);
+          
+          //HINTS START HERE
+          const hints = [release_date, genre ,cast, tagline, overview]; // Array of hints
+          const hintsCount = hints.length;
+          var success = false;
+          let currentHint = 0; // Current hint index
+          const closeButton = '<span aria-hidden="true"><i class="bi bi-x-circle close hint-exit" aria-label="Close" onclick="hideHint()""></i></span>';
+
+          const hintButton = document.getElementById('hint-button');
+
+          hintButton.addEventListener('click', function() {
+              // Your code here
+
+              if (numberOfHints < hintsCount){
+                numberOfHints = numberOfHints + 1;
+              }
+              document.getElementById('hint-count').textContent = numberOfHints.toString();
+
+              const hintElement = document.getElementById('hint');
+              hintElement.style.display = 'block'; 
+
+              // Set the hint text to the current hint and increment the counter
+              const hintLabels = ['Cast:', 'Genre(s):', 'Release Date:', 'Tagline:', 'Overview:']; // Array of hint labels
+              hintElement.innerHTML = closeButton + '<strong>' + hintLabels[currentHint] + '</strong> ' + hints[currentHint];
+
+              currentHint = (currentHint + 1) % hints.length; // Wrap around to the beginning of the array if necessary
+
+            
+          });
+
+
+
+       })
+       .catch(error => {
+           console.log(error);
+       });
+
+
+      var elements = document.getElementsByClassName('title');
+      for(var i=0; i<elements.length; i++) {
+          elements[i].textContent = title;
       }
+      var elements = document.getElementsByClassName('overview');
+      for(var i=0; i<elements.length; i++) {
+          elements[i].textContent = overview;
+      }
+      document.getElementById('poster').setAttribute('src', posterUrl);
+
+  
+      //DISPLAY TODAY'S DATE AND QUOTE
+      document.getElementById('quote').textContent = '\"' + todaysQuote.quote + '\"';
+      document.getElementById('date').textContent = todaysQuote.date;
+
+      //YOUTUBE
+      document.getElementById("youTube").src = todaysQuote.src;
+
+
+      
+
+      const form = document.getElementById('guess-form');
+      form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get the user's answer from the input box
+      const userAnswer = document.getElementById('guess').value;
+      if (success == false){
+        numberOfGuesses = numberOfGuesses + 1;
+      }
+      console.log('Number of Guesses:' + numberOfGuesses.toString());
+      document.getElementById('guess-count').textContent = numberOfGuesses.toString();
+
+      // Check if the user's answer matches the movie title
+      if (userAnswer.toLowerCase().trim() === title.toLowerCase().trim()) {
+          // If the answer is correct, show the "answer" element
+          success = true;
+          document.getElementById('answer').style.height = 'auto';
+          document.getElementById('answer').style.opacity = '1';
+          document.getElementById('answer').style.transition = 'opacity .3s';
+          const modal = document.getElementById('answerModal');
+          const modalInstance = new bootstrap.Modal(modal);
+          modalInstance.show();
+
+          document.getElementById('guess-count').textcontent = 'numberOfGuesses';
+
+
+          // Get the og:title meta tag
+          var ogTitle = document.querySelector('meta[property="og:title"]');
+          // Set the new title value
+          var newTitle = "Guesses: " + numberOfGuesses.toString() + ", Hints: " + numberOfHints.toString();
+          // Set the content attribute of the og:title meta tag to the new title value
+          ogTitle.setAttribute("content", newTitle);
+
+          
+          
+
+          // If the answer is incorrect, show an error message
+          document.getElementById('error-message').style.display = 'none';
+          document.getElementById('error-message').textContent = '';
+          console.log ('foo');
+      } else {
+          // If the answer is incorrect, show an error message
+          console.log ('nope');
+          document.getElementById('error-message').style.display = 'block';
+          document.getElementById('error-message').textContent = 'Sorry, that answer is incorrect. Click above for a hint.';
+          // If the answer is correct, show the "answer" element
+          document.getElementById('answer').style.height = '0';
+          document.getElementById('answer').style.opacity = '0';
+      }
+      });
+
+
+      
+      
+
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+
+
+function hideHint() {
+    const hintElement = document.getElementById('hint');
+    hintElement.style.display = 'none';
+  }
 
 
 var numberOfHints = 0;
