@@ -162,7 +162,7 @@ fetch(url)
        .then(response => response.json())
        .then(credits => {
           console.log(credits);
-          cast = credits.cast.slice(0, 5).map(cast => cast.name);
+          cast = credits.cast.slice(0, 5).map(cast => cast.name).join(", ");
           
           //HINTS START HERE
           const hints = [release_date, genre ,cast, tagline, overview]; // Array of hints
@@ -185,7 +185,7 @@ fetch(url)
               hintElement.style.display = 'block'; 
 
               // Set the hint text to the current hint and increment the counter
-              const hintLabels = ['Cast:', 'Genre(s):', 'Release Date:', 'Tagline:', 'Overview:']; // Array of hint labels
+              const hintLabels = ['Release Date:', 'Genre(s):', 'Cast:', 'Tagline:', 'Overview:']; // Array of hint labels
               hintElement.innerHTML = closeButton + '<strong>' + hintLabels[currentHint] + '</strong> ' + hints[currentHint];
 
               currentHint = (currentHint + 1) % hints.length; // Wrap around to the beginning of the array if necessary
@@ -232,7 +232,6 @@ fetch(url)
       if (success == false){
         numberOfGuesses = numberOfGuesses + 1;
       }
-      console.log('Number of Guesses:' + numberOfGuesses.toString());
       document.getElementById('guess-count').textContent = numberOfGuesses.toString();
 
       // Check if the user's answer matches the movie title
@@ -262,7 +261,6 @@ fetch(url)
           // If the answer is incorrect, show an error message
           document.getElementById('error-message').style.display = 'none';
           document.getElementById('error-message').textContent = '';
-          console.log ('foo');
       } else {
           // If the answer is incorrect, show an error message
           console.log ('nope');
