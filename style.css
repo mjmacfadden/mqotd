@@ -95,6 +95,11 @@ h2 {
   font-size:.6em;
 }
 
+.error{
+  font-weight:100;
+  font-size:10em;
+}
+
 /*
 =================================================
 MODAL
