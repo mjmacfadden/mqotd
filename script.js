@@ -1,54 +1,54 @@
 const quotesOfTheDay = [
     {
-    date: "April 24, 2023",
+    date: "04242023",
     quote: "It's a bold strategy Cotton, let's see if it pays off for 'em",
     id: 9472,
     src: "https://www.youtube.com/embed/9HVejEB5uVk",
   },
   {
-    date: "April 23, 2023",
+    date: "04232023",
     quote: "Put your confidence in myself and J.T. Marlin... and I'm telling you, you will never have to ask for it again",
     id: 14181,
     src: "https://www.youtube.com/embed/FP28lB0I0pE?start=17&end=25",
   },
   {
-    date: "April 22, 2023",
+    date: "04222023",
     quote: "Human sacrifice, dogs and cats living together... MASS HYSTERIA!",
     id: 620,
     src: "https://www.youtube.com/embed/qx73vTi5aFo?start=22&end=36",
   }, 
   {
-    date: "April 21, 2023",
+    date: "04212023",
     quote: "If peeing your pants is cool, consider me Miles Davis.",
     id: 11017,
     src: "https://www.youtube.com/embed/siCNdfH9U40?",
   },
   {
-    date: "April 20, 2023",
+    date: "04202023",
     quote: "We have a pool and a pond.  A pond would be good for you.",
     id: 11977,
     src: "https://www.youtube.com/embed/9tFNbncymjY?end=11",
   },
   {
-    date: "April 19, 2023",
+    date: "04192023",
     quote: "The most valuable commodity I know of is information. Wouldn't you agree?",
     id: 10673,
     src: "https://www.youtube.com/embed/7tZBkOtIYkU?start=13&end=20",
   },
   {
-    date: "April 18, 2023",
+    date: "04182023",
     quote: "Stop chasing me!",
     id: 640,
     src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=65",
   },
   {
-    date: "April 17, 2023",
+    date: "0172023",
     quote: "What, I thought we were in the trust tree in the nest, were we not?",
     id: 11635,
     src: "https://www.youtube.com/embed/umkovqvw714?start=81&end=86",
   },    
   {
-    date: "April 16, 2023",
+    date: "04162023",
     quote: "Who would steal thirty bagged lunches?",
     id: 11017,
     src: "https://www.youtube.com/embed/x5bVrHiPSzw?end=13",
@@ -57,10 +57,32 @@ const quotesOfTheDay = [
 
 
 // Get today's date in the format of "Month day, year"
-const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+//const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+
+const todayIs = new Date();
+const month = todayIs.getMonth() + 1; // add 1 because getMonth() returns 0-based index
+const day = todayIs.getDate();
+const year = todayIs.getFullYear();
+var today = `${month.toString().padStart(2, '0')}${day.toString().padStart(2, '0')}${year}`.toString();
 
 
-const todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
+
+var todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
+const urlParams = new URLSearchParams(window.location.search);
+const date = urlParams.get("date"); // Assumes the URL is in the format .com?date=04202023
+
+
+const quote = quotesOfTheDay.find((q) => q.date === date);
+
+if (quote) {
+  console.log('success'); 
+  // Replace with your display code
+  today = date;
+  todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
+  console.log(today);
+} else {
+  console.log("No quote found for that date");
+}
 
 let id;
 
@@ -74,6 +96,8 @@ for (let i = 0; i < quotesOfTheDay.length; i++) {
     break; // exit the loop since we found a match
   }
 }
+
+
 
 //THE MOVIE DATABASE MAGIC
 const apiKey = 'fe02516c84b34aff3bd02db47d61ec88';
@@ -214,7 +238,18 @@ fetch(url)
   
       //DISPLAY TODAY'S DATE AND QUOTE
       document.getElementById('quote').textContent = '\"' + todaysQuote.quote + '\"';
-      document.getElementById('date').textContent = todaysQuote.date;
+
+      const dateString = todaysQuote.date;
+      const monthNames = ["January", "February", "March", "April", "May", "June", 
+          "July", "August", "September", "October", "November", "December"
+      ];
+      const month = monthNames[parseInt(dateString.substr(0, 2), 10) - 1];
+      const day = parseInt(dateString.substr(2, 2), 10);
+      const year = parseInt(dateString.substr(4, 4), 10);
+
+      const formattedDate = `${month} ${day}, ${year}`;
+
+      document.getElementById('date').textContent = formattedDate;
 
       //YOUTUBE
       document.getElementById("youTube").src = todaysQuote.src;
