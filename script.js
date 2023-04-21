@@ -167,7 +167,7 @@ fetch(url)
           //HINTS START HERE
           const hints = [release_date, genre ,cast, tagline, overview]; // Array of hints
           const hintsCount = hints.length;
-          var success = false;
+          
           let currentHint = 0; // Current hint index
           const closeButton = '<span aria-hidden="true"><i class="bi bi-x-circle close hint-exit" aria-label="Close" onclick="hideHint()""></i></span>';
 
@@ -225,7 +225,8 @@ fetch(url)
       const form = document.getElementById('guess-form');
       form.addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent the form from submitting
-
+      
+      var success = false;
       // Get the user's answer from the input box
       const userAnswer = document.getElementById('guess').value;
       if (success == false){
