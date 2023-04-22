@@ -104,6 +104,7 @@ if (quote) {
 }
 
 let id;
+<<<<<<< HEAD
 
 
     date: "April 17, 2023",
@@ -115,6 +116,8 @@ let id;
 ];
 
 const todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
+=======
+>>>>>>> parent of 5b05ffc (Try Another)
 
 let id;
 
