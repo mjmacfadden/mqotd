@@ -104,22 +104,28 @@ if (quote) {
 }
 
 let id;
-<<<<<<< HEAD
+ 
 
+function setRandomDate() {
+  // Generate a random date within a range (April 1, 2023 to April 30, 2023)
+  const startDate = new Date(2023, 3, 16); // Note: month is 0-based index
+  const endDate = new Date(2023, 3, 21);
+  const randomDate = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
 
-    date: "April 17, 2023",
-    quote:
-      "What, I thought we were in the trust tree in the nest, were we not?",
-    id: 11635,
-    src: "https://www.youtube.com/embed/umkovqvw714?start=81&end=86",
-  },
-];
+  // Format the date as a string in the format "MMddyyyy"
+  const month = String(randomDate.getMonth() + 1).padStart(2, "0");
+  const day = String(randomDate.getDate()).padStart(2, "0");
+  const year = String(randomDate.getFullYear());
+  const dateString = `${month}${day}${year}`;
 
-const todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
-=======
->>>>>>> parent of 5b05ffc (Try Another)
+  // Set the URL parameter
+  const queryParams = new URLSearchParams(window.location.search);
+  queryParams.set("date", dateString);
+  window.history.replaceState({}, "", `${window.location.pathname}?${queryParams}`);
 
-let id;
+  location.reload();
+}
+
 
 // Loop through the quotesOfTheDay array
 for (let i = 0; i < quotesOfTheDay.length; i++) {
