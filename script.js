@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 const quotesOfTheDay = [
     {
     date: "04242023",
@@ -33,7 +32,6 @@ const quotesOfTheDay = [
   {
     date: "04192023",
     quote: "The most valuable commodity I know of is information. Wouldn't you agree?",
-=======
 // Get today's date in the format of "Month day, year"
 const today = new Date().toLocaleDateString("en-US", {
   month: "long",
@@ -52,22 +50,17 @@ const quotesOfTheDay = [
     date: "April 19, 2023",
     quote:
       "The most valuable commodity I know of is information. Wouldn't you agree?",
->>>>>>> Stashed changes
     id: 10673,
     src: "https://www.youtube.com/embed/7tZBkOtIYkU?start=13&end=20",
   },
   {
-<<<<<<< Updated upstream
     date: "04182023",
-=======
     date: "April 18, 2023",
->>>>>>> Stashed changes
     quote: "Stop chasing me!",
     id: 640,
     src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=65",
   },
   {
-<<<<<<< Updated upstream
     date: "0172023",
     quote: "What, I thought we were in the trust tree in the nest, were we not?",
     id: 11635,
@@ -113,7 +106,6 @@ if (quote) {
 let id;
 
 
-=======
     date: "April 17, 2023",
     quote:
       "What, I thought we were in the trust tree in the nest, were we not?",
@@ -126,22 +118,17 @@ const todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
 
 let id;
 
->>>>>>> Stashed changes
 // Loop through the quotesOfTheDay array
 for (let i = 0; i < quotesOfTheDay.length; i++) {
   // Check if the date property matches today's date
   if (quotesOfTheDay[i].date === today) {
-<<<<<<< Updated upstream
       id = quotesOfTheDay[i].id;
-=======
     id = quotesOfTheDay[i].id;
->>>>>>> Stashed changes
     // Do something with the ID, e.g. fetch movie data and display it
     break; // exit the loop since we found a match
   }
 }
 
-<<<<<<< Updated upstream
 
 
 //THE MOVIE DATABASE MAGIC
@@ -160,7 +147,6 @@ searchInput.addEventListener('input', () => {
 
   // Clear any previous suggestions and the addedTitles array
   suggestionsList.innerHTML = '';
-=======
 //THE MOVIE DATABASE MAGIC
 const apiKey = "fe02516c84b34aff3bd02db47d61ec88";
 const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
@@ -177,12 +163,10 @@ searchInput.addEventListener("input", () => {
 
   // Clear any previous suggestions and the addedTitles array
   suggestionsList.innerHTML = "";
->>>>>>> Stashed changes
   addedTitles = [];
 
   // Make a request to the Movie Database API to get movie suggestions based on the user input
   const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&language=en-US&page=1&include_adult=false`;
-<<<<<<< Updated upstream
   
   fetch(url)
     .then(response => response.json())
@@ -193,7 +177,6 @@ searchInput.addEventListener("input", () => {
       results.forEach(movie => {
         if (!addedTitles.includes(movie.title) && addedTitles.length < 3) {
           const listItem = document.createElement('li');
-=======
 
   fetch(url)
     .then((response) => response.json())
@@ -204,7 +187,6 @@ searchInput.addEventListener("input", () => {
       results.forEach((movie) => {
         if (!addedTitles.includes(movie.title) && addedTitles.length < 3) {
           const listItem = document.createElement("li");
->>>>>>> Stashed changes
           listItem.textContent = movie.title;
           suggestionsList.appendChild(listItem);
           addedTitles.push(movie.title);
@@ -213,7 +195,6 @@ searchInput.addEventListener("input", () => {
 
       // Display the suggestions list if there are suggestions, hide it otherwise
       if (addedTitles.length > 0) {
-<<<<<<< Updated upstream
         suggestionsList.style.display = 'block';
       } else {
         suggestionsList.style.display = 'none';
@@ -221,7 +202,6 @@ searchInput.addEventListener("input", () => {
     })
     .catch(error => {
       console.error(error);
-=======
         suggestionsList.style.display = "block";
       } else {
         suggestionsList.style.display = "none";
@@ -329,11 +309,9 @@ fetch(url)
         document.getElementById("answer").style.height = "0";
         document.getElementById("answer").style.opacity = "0";
       }
->>>>>>> Stashed changes
     });
 });
 
-<<<<<<< Updated upstream
 // When a suggestion is clicked, populate the search input with the movie title and hide the suggestions list
 suggestionsList.addEventListener('click', event => {
   const clickedItem = event.target;
@@ -509,14 +487,12 @@ function hideHint() {
     const hintElement = document.getElementById('hint');
     hintElement.style.display = 'none';
   }
-=======
     const hints = [release_date, runtime, tagline, overview]; // Array of hints
     const hintsCount = hints.length;
     var success = false;
     let currentHint = 0; // Current hint index
     const closeButton =
       '<span aria-hidden="true"><i class="bi bi-x-circle close hint-exit" aria-label="Close" onclick="hideHint()""></i></span>';
->>>>>>> Stashed changes
 
     const hintButton = document.getElementById("hint-button");
 
@@ -558,15 +534,12 @@ function hideHint() {
 var numberOfHints = 0;
 var numberOfGuesses = 0;
 
-<<<<<<< Updated upstream
 //STOP YOUTUBE VIDEO WHEN MODAL CLOSES
 var myModal = document.getElementById('answerModal');
 myModal.addEventListener('hide.bs.modal', function (event){
   document.getElementById("youTube").src = todaysQuote.src;
 })
 
-=======
->>>>>>> Stashed changes
 //WEB SHARE API
 const shareButton = document.querySelector("#share-button");
 const imgElement = document.querySelector("#image");
@@ -575,7 +548,6 @@ if (navigator.share) {
   shareButton.addEventListener("click", async () => {
     try {
       // Fetch the image file and convert it to a Blob
-<<<<<<< Updated upstream
       if (numberOfGuesses == 1 && numberOfHints == 0){
         var response = await fetch('img/results/G1H0.png');
       } else if(numberOfGuesses == 1 && numberOfHints == 1){
@@ -672,7 +644,6 @@ if (navigator.share) {
       await navigator.share({
         //title: 'MQOTD',
         //text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
-=======
       const response = await fetch("img/og-img.png");
       const blob = await response.blob();
 
@@ -687,7 +658,6 @@ if (navigator.share) {
           numberOfGuesses.toString() +
           ", Hints: " +
           numberOfHints.toString(),
->>>>>>> Stashed changes
         //url: 'https://example.com/web-share-api',
         files: [file],
       });
