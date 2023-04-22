@@ -76,6 +76,8 @@ const quotesOfTheDay = [
 
 
 // Get today's date in the format of "Month day, year"
+//const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+
 const todayIs = new Date();
 const month = todayIs.getMonth() + 1; // add 1 because getMonth() returns 0-based index
 const day = todayIs.getDate();
@@ -87,27 +89,6 @@ const today = new Date().toLocaleDateString("en-US", { month: "long", day: "nume
 const todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
 
 let id;
- 
-
-function setRandomDate() {
-  // Generate a random date within a range (April 1, 2023 to April 30, 2023)
-  const startDate = new Date(2023, 3, 16); // Note: month is 0-based index
-  const endDate = new Date(2023, 3, 21);
-  const randomDate = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
-
-  // Format the date as a string in the format "MMddyyyy"
-  const month = String(randomDate.getMonth() + 1).padStart(2, "0");
-  const day = String(randomDate.getDate()).padStart(2, "0");
-  const year = String(randomDate.getFullYear());
-  const dateString = `${month}${day}${year}`;
-
-  // Set the URL parameter
-  const queryParams = new URLSearchParams(window.location.search);
-  queryParams.set("date", dateString);
-  window.history.replaceState({}, "", `${window.location.pathname}?${queryParams}`);
-
-  location.reload();
-}
 
 
 // Loop through the quotesOfTheDay array
