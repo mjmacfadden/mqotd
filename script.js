@@ -76,8 +76,6 @@ const quotesOfTheDay = [
 
 
 // Get today's date in the format of "Month day, year"
-//const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
-
 const todayIs = new Date();
 const month = todayIs.getMonth() + 1; // add 1 because getMonth() returns 0-based index
 const day = todayIs.getDate();
