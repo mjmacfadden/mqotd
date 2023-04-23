@@ -1,5 +1,17 @@
 const quotesOfTheDay = [
   {
+    date: "04292023",
+    quote: "You're such a hero, you're so rich, how come you're coming down here wasting your time with such a bunch of bums?",
+    id: 9504,
+    src: "https://www.youtube.com/embed/RmhG3Z2Pv40?start=37&end=42",
+  },
+  {
+    date: "04282023",
+    quote: "I feel the need, the need for speed (weak high five).",
+    id: 744,
+    src: "https://www.youtube.com/embed/BbMxNjI2J4U?start=94&end=101",
+  },
+  {
     date: "04272023",
     quote: "Liter-a-cola, do we make liter-a-cola?",
     id: 39939,
