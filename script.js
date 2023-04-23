@@ -1,5 +1,23 @@
 const quotesOfTheDay = [
-    {
+  {
+    date: "04272023",
+    quote: "Liter-a-cola, do we make liter-a-cola?",
+    id: 39939,
+    src: "https://www.youtube.com/embed/0zgTcrZ5030?start=37&end=49",
+  },
+  {
+    date: "04262023",
+    quote: "Spandex! All Spandex! Where's the Spandex section?",
+    id: 9327,
+    src: "https://www.youtube.com/embed/_Q4KExGwf9g?start=52&end=60",
+  },
+  {
+    date: "04252023",
+    quote: "A: You can never go too far. B: If I'm gonna get busted, it is not gonna be by a guy like that.",
+    id: 9377,
+    src: "https://www.youtube.com/embed/zYq2aXmqBJs?start=26&end=30",
+  },
+  {
     date: "04242023",
     quote: "It's a bold strategy Cotton, let's see if it pays off for 'em",
     id: 9472,
@@ -193,7 +211,7 @@ fetch(url)
       const title = data.title;
       const tagline = data.tagline;
       const release_date = data.release_date;
-      const genre = data.genres.map(genre => genre.name);
+      const genre = data.genres.map(genre => genre.name).join(", ");
       const runtime = data.runtime;
       const overview = data.overview;
       const posterPath = data.poster_path;
@@ -205,7 +223,7 @@ fetch(url)
        .then(response => response.json())
        .then(credits => {
           console.log(credits);
-          cast = credits.cast.slice(0, 5).map(cast => cast.name).join(", ");
+          cast = credits.cast.slice(0, 1).map(cast => cast.name).join(", ");
           
           //HINTS START HERE
           const hints = [release_date, genre ,cast, tagline, overview]; // Array of hints
@@ -228,7 +246,7 @@ fetch(url)
               hintElement.style.display = 'block'; 
 
               // Set the hint text to the current hint and increment the counter
-              const hintLabels = ['Release Date:', 'Genre(s):', 'Cast:', 'Tagline:', 'Overview:']; // Array of hint labels
+              const hintLabels = ['Release Date:', 'Genre(s):', 'Starring:', 'Tagline:', 'Overview:']; // Array of hint labels
               hintElement.innerHTML = closeButton + '<strong>' + hintLabels[currentHint] + '</strong> ' + hints[currentHint];
 
               currentHint = (currentHint + 1) % hints.length; // Wrap around to the beginning of the array if necessary
