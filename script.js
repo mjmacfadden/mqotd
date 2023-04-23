@@ -118,7 +118,7 @@ let id;
 function setRandomDate() {
   // Generate a random date within a range (April 1, 2023 to April 30, 2023)
   const startDate = new Date(2023, 3, 16); // Note: month is 0-based index
-  const endDate = new Date(2023, 3, 21);
+  const endDate = new Date(2023, 3, 23);
   const randomDate = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
 
   // Format the date as a string in the format "MMddyyyy"
