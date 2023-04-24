@@ -172,6 +172,16 @@ UI/UX
   right: 5px;
   top: 5px;
 }
+.try-again,
+.try-again:active{
+  background:transparent !important;
+  color:#FFF !important;
+  border:1px solid #FFF;
+}
+.try-again:hover{
+  background-color: #ffffff10;
+  color:#FFF;
+}
 /*
 =================================================
 FOOTER

@@ -72,7 +72,7 @@ const quotesOfTheDay = [
     src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=65",
   },
   {
-    date: "0172023",
+    date: "04172023",
     quote: "What, I thought we were in the trust tree in the nest, were we not?",
     id: 11635,
     src: "https://www.youtube.com/embed/umkovqvw714?start=81&end=86",
@@ -93,8 +93,6 @@ const day = todayIs.getDate();
 const year = todayIs.getFullYear();
 var today = `${month.toString().padStart(2, '0')}${day.toString().padStart(2, '0')}${year}`.toString();
 
-
-
 var todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
 const urlParams = new URLSearchParams(window.location.search);
 const date = urlParams.get("date"); // Assumes the URL is in the format .com?date=04202023
@@ -107,19 +105,28 @@ if (quote) {
   // Replace with your display code
   today = date;
   todaysQuote = quotesOfTheDay.find((quote) => quote.date === today);
-  console.log(today);
 } else {
   console.log("No quote found for that date");
 }
 
 let id;
  
+// STARAT TRY ANOTHER BUTTON
+let previousDate = null; // Initialize previous date to null
 
 function setRandomDate() {
   // Generate a random date within a range (April 1, 2023 to April 30, 2023)
   const startDate = new Date(2023, 3, 16); // Note: month is 0-based index
-  const endDate = new Date(2023, 3, 23);
-  const randomDate = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
+  const endDate = new Date();
+  let randomDate = null;
+
+  // Loop until a different date is generated
+  do {
+    randomDate = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
+  } while (previousDate !== null && randomDate.getTime() === previousDate.getTime());
+
+  // Update previous date to the new date
+  previousDate = randomDate;
 
   // Format the date as a string in the format "MMddyyyy"
   const month = String(randomDate.getMonth() + 1).padStart(2, "0");
@@ -134,6 +141,7 @@ function setRandomDate() {
 
   location.reload();
 }
+//END TRY ANOTHER BUTTON
 
 
 // Loop through the quotesOfTheDay array
