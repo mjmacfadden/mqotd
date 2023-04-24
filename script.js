@@ -1,5 +1,10 @@
 const quotesOfTheDay = [
-
+  {
+    date: "05032023",
+    quote: "I swallowed a bug.",
+    id: 489,
+    src: "https://www.youtube.com/embed/CuYWp05KHOQ?start=2",
+  },
   {
     date: "05022023",
     quote: "The greatest trick the Devil ever pulled was convincing the world he didn't exist.",
@@ -108,7 +113,18 @@ const quotesOfTheDay = [
     id: 629,
     src: "https://www.youtube.com/embed/cgVdLKw1o0E?start=17&end=22",
   },
-
+  {
+    date: "04142023",
+    quote: "You look like a bucket of lard on a bad day.",
+    id: 14577,
+    src: "https://www.youtube.com/embed/H05_PEKO7H4?start=50&end=60",
+  },
+  {
+    date: "04132023",
+    quote: "Sean, if the Professor calls about that job, just tell him, sorry, I have to go see about a girl.",
+    id: 489,
+    src: "https://www.youtube.com/embed/7TeQgzN6OlA?start=41&end=49",
+  },
 
 ];
 
