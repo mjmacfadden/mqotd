@@ -37,7 +37,7 @@ const quotesOfTheDay = [
   },
   {
     date: "04232023",
-    quote: "Put your confidence in myself and J.T. Marlin... and I'm telling you, you will never have to ask for it again",
+    quote: "Put your confidence in myself and J.T. Marlin... and I'm telling you, you will never have to ask for it again.",
     id: 14181,
     src: "https://www.youtube.com/embed/FP28lB0I0pE?start=17&end=25",
   },
