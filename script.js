@@ -159,7 +159,7 @@ let previousDate = null; // Initialize previous date to null
 
 function setRandomDate() {
   // Generate a random date within a range (April 1, 2023 to April 30, 2023)
-  const startDate = new Date(2023, 3, 16); // Note: month is 0-based index
+  const startDate = new Date(2023, 3, 12); // Note: month is 0-based index
   const endDate = new Date();
   let randomDate = null;
 
