@@ -1,4 +1,23 @@
 const quotesOfTheDay = [
+
+  {
+    date: "05022023",
+    quote: "The greatest trick the Devil ever pulled was convincing the world he didn't exist.",
+    id: 629,
+    src: "https://www.youtube.com/embed/cgVdLKw1o0E?start=119&end=127",
+  },
+  {
+    date: "05012023",
+    quote: "I just stole fifty cars in one night! I'm a little tired, little wired, and I think I deserve a little appreciation!",
+    id: 9679,
+    src: "https://www.youtube.com/embed/eZS2fPUsbhs?start=5&end=14",
+  },
+  {
+    date: "04302023",
+    quote: "Surely you can't be serious?",
+    id: 813,
+    src: "https://www.youtube.com/embed/Qo7qoonzTCE?start=7&end=15",
+  },
   {
     date: "04292023",
     quote: "You're such a hero, you're so rich, how come you're coming down here wasting your time with such a bunch of bums?",
@@ -31,7 +50,7 @@ const quotesOfTheDay = [
   },
   {
     date: "04242023",
-    quote: "It's a bold strategy Cotton, let's see if it pays off for 'em",
+    quote: "It's a bold strategy Cotton, let's see if it pays off for 'em.",
     id: 9472,
     src: "https://www.youtube.com/embed/9HVejEB5uVk",
   },
@@ -83,6 +102,14 @@ const quotesOfTheDay = [
     id: 11017,
     src: "https://www.youtube.com/embed/x5bVrHiPSzw?end=13",
   },
+  {
+    date: "04152023",
+    quote: "Do your friend a favor. Tell him to keep quiet.",
+    id: 629,
+    src: "https://www.youtube.com/embed/cgVdLKw1o0E?start=17&end=22",
+  },
+
+
 ];
 
 
