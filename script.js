@@ -51,7 +51,7 @@ const quotesOfTheDay = [
     date: "04252023",
     quote: "A: You can never go too far. B: If I'm gonna get busted, it is not gonna be by a guy like that.",
     id: 9377,
-    src: "https://www.youtube.com/embed/zYq2aXmqBJs?start=26&end=30",
+    src: "https://www.youtube.com/embed/zYq2aXmqBJs?start=24&end=30",
   },
   {
     date: "04242023",
