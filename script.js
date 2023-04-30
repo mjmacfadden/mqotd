@@ -349,7 +349,7 @@ fetch(url)
         hintButton.addEventListener("click", function () {
           // Your code here
 
-          if (numberOfHints < hintsCount) {
+          if (numberOfHints < hintsCount && success == false) {
             numberOfHints = numberOfHints + 1;
           }
           document.getElementById("hint-count").textContent =
@@ -420,23 +420,19 @@ fetch(url)
     //YOUTUBE
     document.getElementById("youTube").src = todaysQuote.src;
 
+    var success = false;
     const form = document.getElementById("guess-form");
     form.addEventListener("submit", function (event) {
       event.preventDefault(); // Prevent the form from submitting
 
-      var success = false;
       // Get the user's answer from the input box
       const userAnswer = document.getElementById("guess").value;
-      if (success == false) {
-        numberOfGuesses = numberOfGuesses + 1;
-      }
-      document.getElementById("guess-count").textContent =
-        numberOfGuesses.toString();
 
       // Check if the user's answer matches the movie title
       if (userAnswer.toLowerCase().trim() === title.toLowerCase().trim()) {
         // If the answer is correct, show the "answer" element
         success = true;
+        console.log("succes");
         document.getElementById("answer").style.height = "auto";
         document.getElementById("answer").style.opacity = "1";
         document.getElementById("answer").style.transition = "opacity .3s";
@@ -470,6 +466,12 @@ fetch(url)
         document.getElementById("answer").style.height = "0";
         document.getElementById("answer").style.opacity = "0";
       }
+
+      if (success == false) {
+        numberOfGuesses = numberOfGuesses + 1;
+      }
+      document.getElementById("guess-count").textContent =
+        numberOfGuesses.toString();
     });
   })
   .catch((error) => {
@@ -482,7 +484,7 @@ function hideHint() {
 }
 
 var numberOfHints = 0;
-var numberOfGuesses = 0;
+var numberOfGuesses = 1;
 
 //STOP YOUTUBE VIDEO WHEN MODAL CLOSES
 var myModal = document.getElementById("answerModal");
