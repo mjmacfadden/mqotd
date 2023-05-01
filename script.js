@@ -8,6 +8,12 @@ const quotesOfTheDay = [
   },
   */
   {
+    date: "05112023",
+    quote: "Once again, things that could have been brought to my attention YESTERDAY!",
+    id: 11003,
+    src: "https://www.youtube.com/embed/gqQ99s4Ywnw",
+  },
+  {
     //Blues Brothers
     date: "05102023",
     quote:
@@ -610,7 +616,7 @@ if (navigator.share) {
     try {
       // Fetch the image file and convert it to a Blob
       if (numberOfGuesses == 1 && numberOfHints == 0) {
-        var response = await fetch("img/results/G1H0.png");
+        var response = await fetch("img/results/G1H0-small.png");
       } else if (numberOfGuesses == 1 && numberOfHints == 1) {
         var response = await fetch("img/results/G1H1.png");
       } else if (numberOfGuesses == 1 && numberOfHints == 2) {
