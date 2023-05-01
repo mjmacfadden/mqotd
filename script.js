@@ -1,11 +1,37 @@
 const quotesOfTheDay = [
+  /*
   {
+    date: "0502023",
+    quote: "",
+    id: ,
+    src: "",
+  },
+  */
+  {
+    //Blues Brothers
+    date: "05102023",
+    quote:
+      "It's 106 miles to Chicago we got a full tank of gas, half a pack of cigarettes, its dark and we're wearing sunglasses.",
+    id: 525,
+    src: "https://www.youtube.com/embed/gvKs2VLmVnY",
+  },
+  {
+    //The Departed
+    date: "05092023",
+    quote:
+      "I'm the guy that tells you there are guys you can hit and there's guys you can't. Now, that's not quite a guy you can't hit, but it's almost a guy you can't hit.",
+    id: 1422,
+    src: "https://www.youtube.com/embed/yicP7ZEEz1k?start=51&end=68",
+  },
+  {
+    //Tommy Boy
     date: "05082023",
     quote: "My shoulder doesn't hurt very much, but my face does.",
     id: 11381,
     src: "https://www.youtube.com/embed/jvBjBjRF0js?start=11&end=33",
   },
   {
+    //Kingpin
     date: "05072023",
     quote:
       "Ok, Ok. Keep your shirt on. I mean I can figue some things out for myself.",
@@ -13,12 +39,14 @@ const quotesOfTheDay = [
     src: "https://www.youtube.com/embed/28vEFPAmGwU?start=16&end=40",
   },
   {
+    //Big Daddy
     date: "05062023",
     quote: "Fish... Pony... Hip... Hip hop... Hip hop anonymous?",
     id: 9032,
     src: "https://www.youtube.com/embed/vvWxsckzPws?start=11",
   },
   {
+    //Step Brothers
     date: "05052023",
     quote:
       "Then I'm gonna try to get a job at Enterprise Rent-A-Car, because they got an excellent corporate structure and they... they give you the tools to be your own boss.",
@@ -26,18 +54,21 @@ const quotesOfTheDay = [
     src: "https://www.youtube.com/embed/D9ByiElOjLY",
   },
   {
+    //Black Sheep
     date: "05042023",
     quote: "Whoa, what happened to you? You fall into some mud or something?",
     id: 13997,
     src: "https://www.youtube.com/embed/LYN8BXmb6h4",
   },
   {
+    //Good Will Hunting
     date: "05032023",
     quote: "I swallowed a bug.",
     id: 489,
     src: "https://www.youtube.com/embed/CuYWp05KHOQ?start=2",
   },
   {
+    //The Usual Suspects
     date: "05022023",
     quote:
       "The greatest trick the Devil ever pulled was convincing the world he didn't exist.",
@@ -45,6 +76,7 @@ const quotesOfTheDay = [
     src: "https://www.youtube.com/embed/cgVdLKw1o0E?start=119&end=127",
   },
   {
+    //Gone In Sixty Seconds
     date: "05012023",
     quote:
       "I just stole fifty cars in one night! I'm a little tired, little wired, and I think I deserve a little appreciation!",
@@ -52,12 +84,14 @@ const quotesOfTheDay = [
     src: "https://www.youtube.com/embed/eZS2fPUsbhs?start=5&end=14",
   },
   {
+    //Airplane!
     date: "04302023",
     quote: "Surely you can't be serious?",
     id: 813,
     src: "https://www.youtube.com/embed/Qo7qoonzTCE?start=7&end=15",
   },
   {
+    //Glengarry Glen Ross
     date: "04292023",
     quote:
       "You're such a hero, you're so rich, how come you're coming down here wasting your time with such a bunch of bums?",
@@ -65,24 +99,28 @@ const quotesOfTheDay = [
     src: "https://www.youtube.com/embed/RmhG3Z2Pv40?start=37&end=42",
   },
   {
+    //Top Gun
     date: "04282023",
     quote: "I feel the need, the need for speed (weak high five).",
     id: 744,
     src: "https://www.youtube.com/embed/BbMxNjI2J4U?start=94&end=101",
   },
   {
+    //Super Troopers
     date: "04272023",
     quote: "Liter-a-cola, do we make liter-a-cola?",
     id: 39939,
     src: "https://www.youtube.com/embed/0zgTcrZ5030?start=37&end=49",
   },
   {
+    //The Nutty Professor
     date: "04262023",
     quote: "Spandex! All Spandex! Where's the Spandex section?",
     id: 9327,
     src: "https://www.youtube.com/embed/_Q4KExGwf9g?start=52&end=60",
   },
   {
+    //Ferris Bueller's Day Off
     date: "04252023",
     quote:
       "A: You can never go too far. B: If I'm gonna get busted, it is not gonna be by a guy like that.",
@@ -90,12 +128,14 @@ const quotesOfTheDay = [
     src: "https://www.youtube.com/embed/zYq2aXmqBJs?start=24&end=30",
   },
   {
+    //DodgeBall: A True Underdog Story
     date: "04242023",
     quote: "It's a bold strategy Cotton, let's see if it pays off for 'em.",
     id: 9472,
     src: "https://www.youtube.com/embed/9HVejEB5uVk",
   },
   {
+    //Boiler Room
     date: "04232023",
     quote:
       "Put your confidence in myself and J.T. Marlin... and I'm telling you, you will never have to ask for it again.",
@@ -103,24 +143,28 @@ const quotesOfTheDay = [
     src: "https://www.youtube.com/embed/FP28lB0I0pE?start=17&end=25",
   },
   {
+    //Ghost Busters
     date: "04222023",
     quote: "Human sacrifice, dogs and cats living together... MASS HYSTERIA!",
     id: 620,
     src: "https://www.youtube.com/embed/qx73vTi5aFo?start=22&end=36",
   },
   {
+    //Billy Madison
     date: "04212023",
     quote: "If peeing your pants is cool, consider me Miles Davis.",
     id: 11017,
     src: "https://www.youtube.com/embed/siCNdfH9U40?",
   },
   {
+    //Caddyshack
     date: "04202023",
     quote: "We have a pool and a pond.  A pond would be good for you.",
     id: 11977,
     src: "https://www.youtube.com/embed/9tFNbncymjY?end=11",
   },
   {
+    //Wall Street
     date: "04192023",
     quote:
       "The most valuable commodity I know of is information. Wouldn't you agree?",
@@ -128,12 +172,14 @@ const quotesOfTheDay = [
     src: "https://www.youtube.com/embed/7tZBkOtIYkU?start=13&end=20",
   },
   {
+    //Catch Me If You Can
     date: "04182023",
     quote: "Stop chasing me!",
     id: 640,
     src: "https://www.youtube.com/embed/pRi-o9-utSE?start=58&end=65",
   },
   {
+    //Old School
     date: "04172023",
     quote:
       "What, I thought we were in the trust tree in the nest, were we not?",
@@ -141,24 +187,28 @@ const quotesOfTheDay = [
     src: "https://www.youtube.com/embed/umkovqvw714?start=81&end=86",
   },
   {
+    //Billy Madison
     date: "04162023",
     quote: "Who would steal thirty bagged lunches?",
     id: 11017,
     src: "https://www.youtube.com/embed/x5bVrHiPSzw?end=13",
   },
   {
+    //The Usual Suspects
     date: "04152023",
     quote: "Do your friend a favor. Tell him to keep quiet.",
     id: 629,
     src: "https://www.youtube.com/embed/cgVdLKw1o0E?start=17&end=22",
   },
   {
+    //Dirty Work
     date: "04142023",
     quote: "You look like a bucket of lard on a bad day.",
     id: 14577,
     src: "https://www.youtube.com/embed/H05_PEKO7H4?start=50&end=60",
   },
   {
+    //Good Will Hunting
     date: "04132023",
     quote:
       "Sean, if the Professor calls about that job, just tell him, sorry, I have to go see about a girl.",
@@ -193,7 +243,7 @@ if (quote) {
 
 let id;
 
-// STARAT TRY ANOTHER BUTTON
+// START TRY ANOTHER BUTTON
 let previousDate = null; // Initialize previous date to null
 
 function setRandomDate() {
@@ -255,6 +305,7 @@ const suggestionsList = document.getElementById("suggestions");
 const container = document.getElementById("guess-form");
 
 let addedTitles = []; // keep track of the titles that have already been added to the list
+let selectedSuggestion = -1; // keep track of the currently selected suggestion
 
 searchInput.addEventListener("input", () => {
   const query = searchInput.value;
@@ -300,6 +351,44 @@ suggestionsList.addEventListener("click", (event) => {
   searchInput.value = selectedTitle;
   suggestionsList.style.display = "none";
 });
+
+/*
+// Handle arrow key selection
+searchInput.addEventListener("keydown", (event) => {
+  if (addedTitles.length > 0) {
+    if (event.key === "ArrowDown") {
+      // Move selection down if possible
+      if (selectedSuggestion < addedTitles.length - 1) {
+        selectedSuggestion++;
+        highlightSuggestion();
+      }
+    } else if (event.key === "ArrowUp") {
+      // Move selection up if possible
+      if (selectedSuggestion > 0) {
+        selectedSuggestion--;
+        highlightSuggestion();
+      }
+    } else if (event.key === "Enter") {
+      // Select the currently highlighted suggestion and populate the search input
+      const selectedTitle = addedTitles[selectedSuggestion];
+      searchInput.value = selectedTitle;
+      suggestionsList.style.display = "none";
+    }
+  }
+});
+
+// Highlight the currently selected suggestion
+function highlightSuggestion() {
+  const suggestionItems = suggestionsList.getElementsByTagName("li");
+  for (let i = 0; i < suggestionItems.length; i++) {
+    if (i === selectedSuggestion) {
+      suggestionItems[i].classList.add("selected");
+    } else {
+      suggestionItems[i].classList.remove("selected");
+    }
+  }
+}
+*/
 
 // Hide the suggestions box when the user clicks outside of it
 document.addEventListener("click", (event) => {

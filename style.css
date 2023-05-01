@@ -62,15 +62,15 @@ body {
 NAVBAR
 =================================================
 */
-.navigation{
+.navigation {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background: #0d0e18;
 }
 .logo {
   font-weight: 700;
-  float:left;
+  float: left;
 }
-.settings{
+.settings {
   cursor: pointer;
 }
 
@@ -91,16 +91,16 @@ h6 {
 h2 {
   color: #666;
 }
-.smallest{
-  font-size:.6em;
+.smallest {
+  font-size: 0.6em;
 }
 
-.error{
-  font-weight:100;
-  font-size:10em;
+.error {
+  font-weight: 100;
+  font-size: 10em;
 }
-a{
-  text-decoration: none;;
+a {
+  text-decoration: none;
 }
 
 /*
@@ -173,14 +173,14 @@ UI/UX
   top: 5px;
 }
 .try-again,
-.try-again:active{
-  background:transparent !important;
-  color:#FFF !important;
-  border:1px solid #FFF;
+.try-again:active {
+  background: transparent !important;
+  color: #fff !important;
+  border: 1px solid #fff;
 }
-.try-again:hover{
+.try-again:hover {
   background-color: #ffffff10;
-  color:#FFF;
+  color: #fff;
 }
 /*
 =================================================
@@ -193,7 +193,7 @@ FOOTER
 }
 .tmdb {
   width: 150px;
-  margin:10px auto;
+  margin: 10px auto;
 }
 
 /*
@@ -228,5 +228,8 @@ SUGGESTION ENGINE
 }
 
 #suggestions li:hover {
+  background-color: #f1f1f1;
+}
+.selected {
   background-color: #f1f1f1;
 }
