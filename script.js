@@ -313,6 +313,7 @@ searchInput.addEventListener("input", () => {
   // Clear any previous suggestions and the addedTitles array
   suggestionsList.innerHTML = "";
   addedTitles = [];
+  selectedSuggestion = -1;
 
   // Make a request to the Movie Database API to get movie suggestions based on the user input
   const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&language=en-US&page=1&include_adult=false`;
@@ -352,7 +353,7 @@ suggestionsList.addEventListener("click", (event) => {
   suggestionsList.style.display = "none";
 });
 
-/*
+
 // Handle arrow key selection
 searchInput.addEventListener("keydown", (event) => {
   if (addedTitles.length > 0) {
@@ -383,12 +384,13 @@ function highlightSuggestion() {
   for (let i = 0; i < suggestionItems.length; i++) {
     if (i === selectedSuggestion) {
       suggestionItems[i].classList.add("selected");
+      searchInput.value = suggestionItems[i].textContent;
     } else {
       suggestionItems[i].classList.remove("selected");
     }
   }
 }
-*/
+
 
 // Hide the suggestions box when the user clicks outside of it
 document.addEventListener("click", (event) => {
