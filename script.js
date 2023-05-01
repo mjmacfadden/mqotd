@@ -370,11 +370,16 @@ searchInput.addEventListener("keydown", (event) => {
         highlightSuggestion();
       }
     } else if (event.key === "Enter") {
-      // Select the currently highlighted suggestion and populate the search input
-      const selectedTitle = addedTitles[selectedSuggestion];
+      // Check if input value matches any suggestion, otherwise use the input value
+      const inputValue = searchInput.value;
+      const matchingSuggestion = addedTitles.find((suggestion) => suggestion === inputValue);
+      const selectedTitle = matchingSuggestion || inputValue;
+    
+      // Populate the search input with the selected title and hide the suggestions
       searchInput.value = selectedTitle;
       suggestionsList.style.display = "none";
     }
+    
   }
 });
 
@@ -524,6 +529,7 @@ fetch(url)
         // If the answer is correct, show the "answer" element
         success = true;
         console.log("succes");
+        document.getElementById("fail").style.display = "none";
         document.getElementById("answer").style.height = "auto";
         document.getElementById("answer").style.opacity = "1";
         document.getElementById("answer").style.transition = "opacity .3s";
@@ -549,10 +555,13 @@ fetch(url)
         document.getElementById("error-message").textContent = "";
       } else {
         // If the answer is incorrect, show an error message
-        console.log("nope");
         document.getElementById("error-message").style.display = "block";
         document.getElementById("error-message").textContent =
           "Sorry, that answer is incorrect. Click above for a hint.";
+        // Hide error message after 2 seconds
+        setTimeout(function() {
+          document.getElementById("error-message").style.display = "none";
+        }, 3000);
         // If the answer is correct, show the "answer" element
         document.getElementById("answer").style.height = "0";
         document.getElementById("answer").style.opacity = "0";
@@ -573,6 +582,15 @@ function hideHint() {
   const hintElement = document.getElementById("hint");
   hintElement.style.display = "none";
 }
+
+//HIDE STATS WHEN USER GIVES UP
+document.getElementById("fail").addEventListener("click", function() {
+  const statsElements = document.getElementsByClassName("fail");
+  for (let i = 0; i < statsElements.length; i++) {
+    statsElements[i].style.display = "none";
+  }
+});
+
 
 var numberOfHints = 0;
 var numberOfGuesses = 1;
@@ -687,7 +705,7 @@ if (navigator.share) {
       await navigator.share({
         //title: 'MQOTD',
         //text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
-        //url: 'https://example.com/web-share-api',
+        url: 'https://moviequoteoftheday.com/',
         files: [file],
       });
 
