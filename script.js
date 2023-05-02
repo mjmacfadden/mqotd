@@ -709,7 +709,7 @@ if (navigator.share) {
 
       // Share the data including the file
       await navigator.share({
-        text: '"The greatest trick the Devil ever pulled was convincing the world he didn\'t exist."/r/n/r/nG: ❌✅⬜️⬜️⬜️/r/n/r/nH: ☑️☑️⬜️⬜️⬜️/r/n/r/nmqotd.com/?date=05022023'
+        text: '"The greatest trick the Devil ever pulled was convincing the world he didn\'t exist."\r\n\r\nG: ❌✅⬜️⬜️⬜️\r\n\r\nH: ☑️☑️⬜️⬜️⬜️\r\n\r\nmqotd.com/?date=05022023'
         //title: 'MQOTD',
         //text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
         //url: 'https://moviequoteoftheday.com/',
