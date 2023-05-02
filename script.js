@@ -785,7 +785,12 @@ if (navigator.share) {
       // Share the data including the file
       await navigator.share({
         text:
-          '"' + todaysQuote.quote + '"\n\n' + textResultes + "\n\nmqotd.com",
+          '"' +
+          todaysQuote.quote +
+          '"\n\n' +
+          textResultes +
+          "\n\nmqotd.com/?date=" +
+          date,
         //title: 'MQOTD',
         //text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
         //url: 'https://moviequoteoftheday.com/',
