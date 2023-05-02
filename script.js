@@ -784,13 +784,21 @@ if (navigator.share) {
 
       // Share the data including the file
       await navigator.share({
-        text:
+        /*text:
           '"' +
           todaysQuote.quote +
           '"\n\n' +
           textResultes +
           "\n\nmqotd.com/?date=" +
           date,
+          */
+        text:
+          '"' +
+          todaysQuote.quote +
+          '"\n\n' +
+          textResultes +
+          "\n\nmqotd.com/?date=" +
+          (date ? date : today),
         //title: 'MQOTD',
         //text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
         //url: 'https://moviequoteoftheday.com/',
@@ -818,3 +826,5 @@ if (navigator.share) {
         .catch((error) => console.log("Error copying text:", error));
     });
 }
+
+console.log(today);
