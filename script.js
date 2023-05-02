@@ -709,10 +709,11 @@ if (navigator.share) {
 
       // Share the data including the file
       await navigator.share({
+        text: '"The greatest trick the Devil ever pulled was convincing the world he didn\'t exist."<br>G: ❌✅⬜️⬜️⬜️<br>H: ☑️☑️⬜️⬜️⬜️<br>mqotd.com/?date=05022023'
         //title: 'MQOTD',
         //text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
-        url: 'https://moviequoteoftheday.com/',
-        files: [file],
+        //url: 'https://moviequoteoftheday.com/',
+        //files: [file],
       });
 
       console.log("Successful share");
