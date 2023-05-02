@@ -709,83 +709,83 @@ if (navigator.share) {
       var textResults = "foo";
 
       if (numberOfGuesses == 1 && numberOfHints == 0) {
-        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\nH: ⬜️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 1 && numberOfHints == 1) {
-        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ☑️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\nH: ☑️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 1 && numberOfHints == 2) {
-        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ☑️☑️⬜️⬜️⬜️";
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\nH: ☑️☑️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 1 && numberOfHints == 3) {
-        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ☑️☑️☑️⬜️⬜️";
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\nH: ☑️☑️☑️⬜️⬜️";
       } else if (numberOfGuesses == 1 && numberOfHints == 4) {
-        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ☑️☑️☑️☑️⬜️";
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\nH: ☑️☑️☑️☑️⬜️";
       } else if (numberOfGuesses == 1 && numberOfHints >= 5) {
-        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ☑️☑️☑️☑️☑️";
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\nH: ☑️☑️☑️☑️☑️";
       } else if (numberOfGuesses == 2 && numberOfHints == 0) {
-        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\nH: ⬜️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 2 && numberOfHints == 1) {
-        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ☑️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\nH: ☑️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 2 && numberOfHints == 2) {
-        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ☑️☑️⬜️⬜️⬜️";
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\nH: ☑️☑️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 2 && numberOfHints == 3) {
-        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ☑️☑️☑️⬜️⬜️";
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\nH: ☑️☑️☑️⬜️⬜️";
       } else if (numberOfGuesses == 2 && numberOfHints == 4) {
-        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ☑️☑️☑️☑️⬜️";
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\nH: ☑️☑️☑️☑️⬜️";
       } else if (numberOfGuesses == 2 && numberOfHints >= 5) {
-        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ☑️☑️☑️☑️☑️";
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\nH: ☑️☑️☑️☑️☑️";
       } else if (numberOfGuesses == 3 && numberOfHints == 0) {
-        var textResultes = "G: ❌❌✅⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌✅⬜️⬜️\nH: ⬜️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 3 && numberOfHints == 1) {
-        var textResultes = "G: ❌❌✅⬜️⬜️\r\nH: ☑️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌✅⬜️⬜️\nH: ☑️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 3 && numberOfHints == 2) {
-        var textResultes = "G: ❌❌✅⬜️⬜️\r\nH: ☑️☑️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌✅⬜️⬜️\nH: ☑️☑️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 3 && numberOfHints == 3) {
-        var textResultes = "G: ❌❌✅⬜️⬜️\r\nH: ☑️☑️☑️⬜️⬜️";
+        var textResultes = "G: ❌❌✅⬜️⬜️\nH: ☑️☑️☑️⬜️⬜️";
       } else if (numberOfGuesses == 3 && numberOfHints == 4) {
-        var textResultes = "G: ❌❌✅⬜️⬜️\r\nH: ☑️☑️☑️☑️⬜️";
+        var textResultes = "G: ❌❌✅⬜️⬜️\nH: ☑️☑️☑️☑️⬜️";
       } else if (numberOfGuesses == 3 && numberOfHints >= 5) {
-        var textResultes = "G: ❌❌✅⬜️⬜️\r\nH: ☑️☑️☑️☑️☑️";
+        var textResultes = "G: ❌❌✅⬜️⬜️\nH: ☑️☑️☑️☑️☑️";
       } else if (numberOfGuesses == 4 && numberOfHints == 0) {
-        var textResultes = "G: ❌❌❌✅⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌❌✅⬜️\nH: ⬜️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 4 && numberOfHints == 1) {
-        var textResultes = "G: ❌❌❌✅⬜️\r\nH: ☑️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌❌✅⬜️\nH: ☑️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 4 && numberOfHints == 2) {
-        var textResultes = "G: ❌❌❌✅⬜️\r\nH: ☑️☑️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌❌✅⬜️\nH: ☑️☑️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 4 && numberOfHints == 3) {
-        var textResultes = "G: ❌❌❌✅⬜️\r\nH: ☑️☑️☑️⬜️⬜️";
+        var textResultes = "G: ❌❌❌✅⬜️\nH: ☑️☑️☑️⬜️⬜️";
       } else if (numberOfGuesses == 4 && numberOfHints == 4) {
-        var textResultes = "G: ❌❌❌✅⬜️\r\nH: ☑️☑️☑️☑️⬜️";
+        var textResultes = "G: ❌❌❌✅⬜️\nH: ☑️☑️☑️☑️⬜️";
       } else if (numberOfGuesses == 4 && numberOfHints >= 5) {
-        var textResultes = "G: ❌❌❌✅⬜️\r\nH: ☑️☑️☑️☑️☑️";
+        var textResultes = "G: ❌❌❌✅⬜️\nH: ☑️☑️☑️☑️☑️";
       } else if (numberOfGuesses == 5 && numberOfHints == 0) {
-        var textResultes = "G: ❌❌❌❌✅\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌❌❌✅\nH: ⬜️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 5 && numberOfHints == 1) {
-        var textResultes = "G: ❌❌❌❌✅\r\nH: ☑️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌❌❌✅\nH: ☑️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 5 && numberOfHints == 2) {
-        var textResultes = "G: ❌❌❌❌✅\r\nH: ☑️☑️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌❌❌✅\nH: ☑️☑️⬜️⬜️⬜️";
       } else if (numberOfGuesses == 5 && numberOfHints == 3) {
-        var textResultes = "G: ❌❌❌❌✅\r\nH: ☑️☑️☑️⬜️⬜️";
+        var textResultes = "G: ❌❌❌❌✅\nH: ☑️☑️☑️⬜️⬜️";
       } else if (numberOfGuesses == 5 && numberOfHints == 4) {
-        var textResultes = "G: ❌❌❌❌✅\r\nH: ☑️☑️☑️☑️⬜️";
+        var textResultes = "G: ❌❌❌❌✅\nH: ☑️☑️☑️☑️⬜️";
       } else if (numberOfGuesses == 5 && numberOfHints >= 5) {
-        var textResultes = "G: ❌❌❌❌✅\r\nH: ☑️☑️☑️☑️☑️";
+        var textResultes = "G: ❌❌❌❌✅\nH: ☑️☑️☑️☑️☑️";
       } else if (numberOfGuesses > 5 && numberOfHints == 0) {
-        var textResultes = "G: ❌❌❌❌❌\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌❌❌❌\nH: ⬜️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses > 5 && numberOfHints == 1) {
-        var textResultes = "G: ❌❌❌❌❌\r\nH: ☑️⬜️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌❌❌❌\nH: ☑️⬜️⬜️⬜️⬜️";
       } else if (numberOfGuesses > 5 && numberOfHints == 2) {
-        var textResultes = "G: ❌❌❌❌❌\r\nH: ☑️☑️⬜️⬜️⬜️";
+        var textResultes = "G: ❌❌❌❌❌\nH: ☑️☑️⬜️⬜️⬜️";
       } else if (numberOfGuesses > 5 && numberOfHints == 3) {
-        var textResultes = "G: ❌❌❌❌❌\r\nH: ☑️☑️☑️⬜️⬜️";
+        var textResultes = "G: ❌❌❌❌❌\nH: ☑️☑️☑️⬜️⬜️";
       } else if (numberOfGuesses > 5 && numberOfHints == 4) {
-        var textResultes = "G: ❌❌❌❌❌\r\nH: ☑️☑️☑️☑️⬜️";
+        var textResultes = "G: ❌❌❌❌❌\nH: ☑️☑️☑️☑️⬜️";
       } else {
-        var textResultes = "G: ❌❌❌❌❌\r\nH: ☑️☑️☑️☑️☑️";
+        var textResultes = "G: ❌❌❌❌❌\nH: ☑️☑️☑️☑️☑️";
       }
 
       // Share the data including the file
       await navigator.share({
         text:
-          '"' + todaysQuote.quote + '"\r\n\r\n' + textResultes + "\r\n\r\nmqotd.com",
+          '"' + todaysQuote.quote + '"\n\n' + textResultes + "\n\nmqotd.com",
         //title: 'MQOTD',
         //text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
         //url: 'https://moviequoteoftheday.com/',
