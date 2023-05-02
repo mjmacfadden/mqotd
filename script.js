@@ -9,7 +9,8 @@ const quotesOfTheDay = [
   */
   {
     date: "05112023",
-    quote: "Once again, things that could have been brought to my attention YESTERDAY!",
+    quote:
+      "Once again, things that could have been brought to my attention YESTERDAY!",
     id: 11003,
     src: "https://www.youtube.com/embed/gqQ99s4Ywnw",
   },
@@ -359,7 +360,6 @@ suggestionsList.addEventListener("click", (event) => {
   suggestionsList.style.display = "none";
 });
 
-
 // Handle arrow key selection
 searchInput.addEventListener("keydown", (event) => {
   if (addedTitles.length > 0) {
@@ -378,14 +378,15 @@ searchInput.addEventListener("keydown", (event) => {
     } else if (event.key === "Enter") {
       // Check if input value matches any suggestion, otherwise use the input value
       const inputValue = searchInput.value;
-      const matchingSuggestion = addedTitles.find((suggestion) => suggestion === inputValue);
+      const matchingSuggestion = addedTitles.find(
+        (suggestion) => suggestion === inputValue
+      );
       const selectedTitle = matchingSuggestion || inputValue;
-    
+
       // Populate the search input with the selected title and hide the suggestions
       searchInput.value = selectedTitle;
       suggestionsList.style.display = "none";
     }
-    
   }
 });
 
@@ -401,7 +402,6 @@ function highlightSuggestion() {
     }
   }
 }
-
 
 // Hide the suggestions box when the user clicks outside of it
 document.addEventListener("click", (event) => {
@@ -565,7 +565,7 @@ fetch(url)
         document.getElementById("error-message").textContent =
           "Sorry, that answer is incorrect. Click above for a hint.";
         // Hide error message after 2 seconds
-        setTimeout(function() {
+        setTimeout(function () {
           document.getElementById("error-message").style.display = "none";
         }, 3000);
         // If the answer is correct, show the "answer" element
@@ -590,13 +590,12 @@ function hideHint() {
 }
 
 //HIDE STATS WHEN USER GIVES UP
-document.getElementById("fail").addEventListener("click", function() {
+document.getElementById("fail").addEventListener("click", function () {
   const statsElements = document.getElementsByClassName("fail");
   for (let i = 0; i < statsElements.length; i++) {
     statsElements[i].style.display = "none";
   }
 });
-
 
 var numberOfHints = 0;
 var numberOfGuesses = 1;
@@ -707,9 +706,100 @@ if (navigator.share) {
       // Create a new File object from the Blob
       const file = new File([blob], "MQOTD.png", { type: "image/png" });
 
+      var textResults = "foo";
+
+      if (numberOfGuesses == 1 && numberOfHints == 0) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 1 && numberOfHints == 1) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ☑️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 1 && numberOfHints == 2) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ☑️☑️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 1 && numberOfHints == 3) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ☑️☑️☑️⬜️⬜️";
+      } else if (numberOfGuesses == 1 && numberOfHints == 4) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ☑️☑️☑️☑️⬜️";
+      } else if (numberOfGuesses == 1 && numberOfHints == 5) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ☑️☑️☑️☑️☑️";
+      } else if (numberOfGuesses == 1 && numberOfHints > 5) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 2 && numberOfHints == 0) {
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 2 && numberOfHints == 1) {
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ☑️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 2 && numberOfHints == 2) {
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ☑️☑️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 2 && numberOfHints == 3) {
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ☑️☑️☑️⬜️⬜️";
+      } else if (numberOfGuesses == 2 && numberOfHints == 4) {
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ☑️☑️☑️☑️⬜️";
+      } else if (numberOfGuesses == 2 && numberOfHints == 5) {
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ☑️☑️☑️☑️☑️";
+      } else if (numberOfGuesses == 2 && numberOfHints > 5) {
+        var textResultes = "G: ❌✅⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 3 && numberOfHints == 0) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 3 && numberOfHints == 1) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 3 && numberOfHints == 2) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 3 && numberOfHints == 3) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 3 && numberOfHints == 4) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 3 && numberOfHints == 5) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 3 && numberOfHints > 5) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 4 && numberOfHints == 0) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 4 && numberOfHints == 1) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 4 && numberOfHints == 2) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 4 && numberOfHints == 3) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 4 && numberOfHints == 4) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 4 && numberOfHints == 5) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 4 && numberOfHints > 5) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 5 && numberOfHints == 0) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 5 && numberOfHints == 1) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 5 && numberOfHints == 2) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 5 && numberOfHints == 3) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 5 && numberOfHints == 4) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 5 && numberOfHints == 5) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses == 5 && numberOfHints > 5) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses > 5 && numberOfHints == 0) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses > 5 && numberOfHints == 1) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses > 5 && numberOfHints == 2) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses > 5 && numberOfHints == 3) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses > 5 && numberOfHints == 4) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses > 5 && numberOfHints == 5) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else if (numberOfGuesses > 5 && numberOfHints > 5) {
+        var textResultes = "G: ✅⬜️⬜️⬜️⬜️\r\nH: ⬜️⬜️⬜️⬜️⬜️";
+      } else {
+        var textResultes = "G: ❌❌❌❌❌\r\nH: ☑️☑️☑️☑️☑️";
+      }
+
       // Share the data including the file
       await navigator.share({
-        text: '"The greatest trick the Devil ever pulled was convincing the world he didn\'t exist."\r\n\r\nG: ❌✅⬜️⬜️⬜️\r\n\r\nH: ☑️☑️⬜️⬜️⬜️\r\n\r\nmqotd.com/?date=05022023'
+        text:
+          '"' + todaysQuote.quote + '"\r\n\r\n' + textResultes + "mqotd.com",
         //title: 'MQOTD',
         //text: 'MQOTD: Guesses: ' + numberOfGuesses.toString() + ', Hints: ' + numberOfHints.toString(),
         //url: 'https://moviequoteoftheday.com/',
