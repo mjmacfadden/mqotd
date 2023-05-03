@@ -8,6 +8,32 @@ const quotesOfTheDay = [
   },
   */
   {
+    date: "05152023",
+    quote: "This is my BOOM stick.",
+    id: 766,
+    src: "https://www.youtube.com/embed/zdkqagOUaPM?start=11&end=33",
+  },
+  {
+    date: "05142023",
+    quote: "Would you teach me to football?",
+    id: 9291,
+    src: "https://www.youtube.com/embed/IhbiNl9pB5U?start=11&end=22",
+  },
+  {
+    date: "05132023",
+    quote: "I wanna see the kid in the net who wouldn't take the test.",
+    id: 14292,
+    src: "https://www.youtube.com/embed/PkTMIoVCewU?start=57&end=70",
+  },
+  //Billy Madison
+  {
+    date: "05122023",
+    quote: "Any more brain busters?",
+    id: 11017,
+    src: "https://www.youtube.com/embed/DG1QPZ6qfac",
+  },
+  //The Wedding Singer
+  {
     date: "05112023",
     quote:
       "Once again, things that could have been brought to my attention YESTERDAY!",
