@@ -7,6 +7,28 @@ const quotesOfTheDay = [
     src: "",
   },
   */
+ //The Other Guys
+  {
+    date: "05232023",
+    quote: "Did that go the way you thought it was going to go? Nope.",
+    id: 27581,
+    src: "https://www.youtube.com/embed/Ogq2BkybFGY?start=128&end=191",
+  },
+  //Happy Gilmore
+  {
+    date: "05222023",
+    quote: "Let me just sit here and enjoy the one thing that makes me a little bit happy, this fresh, delicious, tasty, meaty, turkey-filled... Cold Cut Combo.",
+    id: 9614,
+    src: "https://www.youtube.com/embed/YaQqj2PmBh4?start=23&end=48",
+  },
+  //Pulp Fiction
+  {
+    date: "05212023",
+    quote: "Mmmm, this is a tasty burger.",
+    id: 680,
+    src: "https://www.youtube.com/embed/3ID5aKbNW08",
+  },
+  //Snatch
   {
     date: "05202023",
     quote: "Save your breath for cooling your porridge.",
