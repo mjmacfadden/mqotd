@@ -8,17 +8,54 @@ const quotesOfTheDay = [
   },
   */
   {
+    date: "05202023",
+    quote: "Save your breath for cooling your porridge.",
+    id: 107,
+    src: "https://www.youtube.com/embed/2pIuncegdOc?start=30&end=37",
+  },
+  //Forgetting Sarah Marshall
+  {
+    date: "05192023",
+    quote: "The weather outside is weather.",
+    id: 9870,
+    src: "https://www.youtube.com/embed/Oj37OwvKqpA?start=52",
+  },
+ //Gladiator
+  {
+    date: "05182023",
+    quote: "If you find yourself alone, riding in the green fields with the sun on your face, do not be troubled. For you are in Elysium, and you're already dead!",
+    id: 98,
+    src: "https://www.youtube.com/embed/CDpTc32sV1Y?start=35&end=51",
+  },
+  //Step Brothers
+  {
+    date: "05172023",
+    quote: "Are bonito fish big?",
+    id: 12133,
+    src: "https://www.youtube.com/embed/WAlHZC5VZeI?start=20&end=51",
+  },
+  //Napoleon Dynamite
+  {
+    date: "05162023",
+    quote: "How much you wanna make a bet I can throw a football over them mountains?",
+    id: 8193,
+    src: "https://www.youtube.com/embed/b8cIBdghu5Q",
+  },
+  //Aym of Darkness
+  {
     date: "05152023",
     quote: "This is my BOOM stick.",
     id: 766,
     src: "https://www.youtube.com/embed/zdkqagOUaPM?start=11&end=33",
   },
+  //The Longest yard
   {
     date: "05142023",
     quote: "Would you teach me to football?",
     id: 9291,
     src: "https://www.youtube.com/embed/IhbiNl9pB5U?start=11&end=22",
   },
+  //Miracle
   {
     date: "05132023",
     quote: "I wanna see the kid in the net who wouldn't take the test.",
