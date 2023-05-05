@@ -1,13 +1,27 @@
 const quotesOfTheDay = [
   /*
   {
-    date: "0502023",
+    date: "052023",
     quote: "",
     id: ,
     src: "",
   },
   */
- //The Other Guys
+  //I Love You Man
+  {
+    date: "05252023",
+    quote: "You got it Jobin!",
+    id: 16538,
+    src: "https://www.youtube.com/embed/j21vWnngGRM?start=23&end=46",
+  },
+  //Jurassic Park
+  {
+    date: "05242023",
+    quote: "Hold onto your butts.",
+    id: 329,
+    src: "https://www.youtube.com/embed/UjvGAYuWSUA",
+  },
+  //The Other Guys
   {
     date: "05232023",
     quote: "Did that go the way you thought it was going to go? Nope.",
@@ -17,7 +31,8 @@ const quotesOfTheDay = [
   //Happy Gilmore
   {
     date: "05222023",
-    quote: "Let me just sit here and enjoy the one thing that makes me a little bit happy, this fresh, delicious, tasty, meaty, turkey-filled... Cold Cut Combo.",
+    quote:
+      "Let me just sit here and enjoy the one thing that makes me a little bit happy, this fresh, delicious, tasty, meaty, turkey-filled... Cold Cut Combo.",
     id: 9614,
     src: "https://www.youtube.com/embed/YaQqj2PmBh4?start=23&end=48",
   },
@@ -42,10 +57,11 @@ const quotesOfTheDay = [
     id: 9870,
     src: "https://www.youtube.com/embed/Oj37OwvKqpA?start=52",
   },
- //Gladiator
+  //Gladiator
   {
     date: "05182023",
-    quote: "If you find yourself alone, riding in the green fields with the sun on your face, do not be troubled. For you are in Elysium, and you're already dead!",
+    quote:
+      "If you find yourself alone, riding in the green fields with the sun on your face, do not be troubled. For you are in Elysium, and you're already dead!",
     id: 98,
     src: "https://www.youtube.com/embed/CDpTc32sV1Y?start=35&end=51",
   },
@@ -59,7 +75,8 @@ const quotesOfTheDay = [
   //Napoleon Dynamite
   {
     date: "05162023",
-    quote: "How much you wanna make a bet I can throw a football over them mountains?",
+    quote:
+      "How much you wanna make a bet I can throw a football over them mountains?",
     id: 8193,
     src: "https://www.youtube.com/embed/b8cIBdghu5Q",
   },
