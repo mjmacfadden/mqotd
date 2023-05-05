@@ -1,13 +1,64 @@
 const quotesOfTheDay = [
   /*
   {
-    date: "052023",
+    date: "062023",
     quote: "",
     id: ,
     src: "",
   },
   */
-  //I Love You Man
+  //Kicking & Screaming
+  {
+    date: "06012023",
+    quote:
+      "You're my assistant. You're supposed to back me up and go get me juiceboxes whenever I want. Now go get me a juicebox!",
+    id: 9981,
+    src: "https://www.youtube.com/embed/ry1tNGC6npg?start=9&end=30",
+  },
+  //Cool Hnad Luke
+  {
+    date: "05312023",
+    quote: "What we've got here is failure to communicate.",
+    id: 903,
+    src: "https://www.youtube.com/embed/_WUyZXhLHMk?start=83&end=91",
+  },
+  //Gladiator
+  {
+    date: "05302023",
+    quote: "My name is Maximus Decimus Meridius.",
+    id: 98,
+    src: "https://www.youtube.com/embed/I25Wp6ZLk7Y?end=31",
+  },
+  //The Shawshank Redemption
+  {
+    date: "05292023",
+    quote: "The man likes to play chess; let's get him some rocks.",
+    id: 278,
+    src: "https://www.youtube.com/embed/KhPUkQv_Ir0?end=15",
+  },
+  //Crazy, Stupid, Love
+  {
+    date: "05282023",
+    quote: "Cal, be better than The Gap. Be better than The Gap",
+    id: 50646,
+    src: "https://www.youtube.com/embed/q69QJAlQxWo?start=130&end=162",
+  },
+  //We're The Millers
+  {
+    date: "05272023",
+    quote:
+      "Well, I'm awake and I speak english, so I do know what you're saying.",
+    id: 138832,
+    src: "https://www.youtube.com/embed/CO9ysLspb4Q?start=7&end=16",
+  },
+  //The Princess Bride
+  {
+    date: "05262023",
+    quote: "Anybody want a peanut?",
+    id: 2493,
+    src: "https://www.youtube.com/embed/XCHKYNFH9Lk?start=130&end=144",
+  },
+  //I Love You, Man
   {
     date: "05252023",
     quote: "You got it Jobin!",
