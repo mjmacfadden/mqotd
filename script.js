@@ -7,6 +7,20 @@ const quotesOfTheDay = [
     src: "",
   },
   */
+  //Taladega Nights: The Ballad of Ricky Bobby
+  {
+    date: "06032023",
+    quote: "I'm going to come at you like a spider monkey",
+    id: 9718,
+    src: "https://www.youtube.com/embed/pDeaNo2pNYM?start=17&end=24",
+  },
+  //¡Three Amigos!
+  {
+    date: "06022023",
+    quote: "My little buttercup has the sweetest smile.",
+    id: 8388,
+    src: "https://www.youtube.com/embed/T6wetejGqh0?start=47&end=143",
+  },
   //Kicking & Screaming
   {
     date: "06012023",
