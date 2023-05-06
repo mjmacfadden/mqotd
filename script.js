@@ -722,8 +722,9 @@ fetch(url)
           document.getElementById("error-message").style.display = "none";
         }, 3000);
         // If the answer is correct, show the "answer" element
-        document.getElementById("answer").style.height = "0";
-        document.getElementById("answer").style.opacity = "0";
+        // THIS IS MAYBE A PROBLEM
+        document.getElementById("answer").style.height = "auto";
+        document.getElementById("answer").style.opacity = "1";
       }
 
       if (success == false) {
