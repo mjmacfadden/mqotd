@@ -7,10 +7,104 @@ const quotesOfTheDay = [
     src: "",
   },
   */
+  //The Town
+  {
+    date: "06162023",
+    quote:
+      "I need your help. I can't tell you what it is, you can never ask me about it later, and we're gonna hurt some people.",
+    id: 23168,
+    src: "https://www.youtube.com/embed/8wXur_T_j78?end=15",
+  },
+  //Accepted
+  {
+    date: "06152023",
+    quote: "Ask me about my weiner.",
+    id: 9788,
+    src: "https://www.youtube.com/embed/eP52omnnZmg?start=21&end=37",
+  },
+  //Mr. Deeds
+  {
+    date: "06142023",
+    quote: "I fear you're underestimating the sneakiness, sir.",
+    id: 2022,
+    src: "https://www.youtube.com/embed/v_O_2CSL_RY?start=27&end=78",
+  },
+  //Mrs. Doubtfire
+  {
+    date: "06132023",
+    quote: "It was a run by fruiting.",
+    id: 788,
+    src: "https://www.youtube.com/embed/n-WMuNSr6PY?start=105&end=133",
+  },
+  //Wall Street
+  {
+    date: "06122023",
+    quote: "Wall Street what else you got besides connections at the airport?",
+    id: 10673,
+    src: "https://www.youtube.com/embed/PxdTA-wiSX8?start=3",
+  },
+  //The Sandlot
+  {
+    date: "06112023",
+    quote: "So how can I have some more of nothing?",
+    id: 11528,
+    src: "https://www.youtube.com/embed/A-UY4lOX6Fo?start=68&end=81",
+  },
+  //Wedding Crashers
+  {
+    date: "06102023",
+    quote:
+      "I happen to know everything there is to know about maple syrup. I love maple syrup.",
+    id: 9522,
+    src: "https://www.youtube.com/embed/H5_bIiWR0nM?start=7&end=24",
+  },
+  //The Notebook
+  {
+    date: "06092023",
+    quote: "If you're a bird, I'm a bird.",
+    id: 11036,
+    src: "https://www.youtube.com/embed/d7_F5P5PygM?start=32&end=63",
+  },
+  //Super Bad
+  {
+    date: "06082023",
+    quote: "What are you trying to be an Irish R&B singer?",
+    id: 8363,
+    src: "https://www.youtube.com/embed/j9RWVEAQeC0?end=13",
+  },
+  //Stripes
+  {
+    date: "06072023",
+    quote: "Army training, sir.",
+    id: 10890,
+    src: "https://www.youtube.com/embed/rHcMxOJ5BN4?start=67&end=80",
+  },
+  //The Internship
+  {
+    date: "06062023",
+    quote:
+      "What if they take that photo and instantaneously put it out there on the line and share it with their friends?",
+    id: 116741,
+    src: "https://www.youtube.com/embed/jxvdsdGavq0?start=12&end=41",
+  },
+  //The Matrix
+  {
+    date: "06052023",
+    quote: "I know kung fu.",
+    id: 603,
+    src: "https://www.youtube.com/embed/0YhJxJZOWBw?start=40&end=59",
+  },
+  //The Hangover
+  {
+    date: "06042023",
+    quote: "What do tigers dream of?",
+    id: 18785,
+    src: "https://www.youtube.com/embed/DdNfSuTpDbA?start=79&end=107",
+  },
   //Taladega Nights: The Ballad of Ricky Bobby
   {
     date: "06032023",
-    quote: "I'm going to come at you like a spider monkey",
+    quote: "I'm going to come at you like a spider monkey!",
     id: 9718,
     src: "https://www.youtube.com/embed/pDeaNo2pNYM?start=17&end=24",
   },
@@ -53,7 +147,7 @@ const quotesOfTheDay = [
   //Crazy, Stupid, Love
   {
     date: "05282023",
-    quote: "Cal, be better than The Gap. Be better than The Gap",
+    quote: "Cal, be better than The Gap. Be better than The Gap.",
     id: 50646,
     src: "https://www.youtube.com/embed/q69QJAlQxWo?start=130&end=162",
   },
@@ -388,6 +482,13 @@ const quotesOfTheDay = [
       "Sean, if the Professor calls about that job, just tell him, sorry, I have to go see about a girl.",
     id: 489,
     src: "https://www.youtube.com/embed/7TeQgzN6OlA?start=41&end=49",
+  },
+  //Wedding Crashers
+  {
+    date: "04122023",
+    quote: "Rule number 76: No excuses, play like a champion.",
+    id: 9522,
+    src: "https://www.youtube.com/embed/hPTcLZi7oH4",
   },
 ];
 
