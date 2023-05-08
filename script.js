@@ -1097,3 +1097,48 @@ if (navigator.share) {
 }
 
 console.log(today);
+
+//STREAK COUNTER
+
+// Retrieve the streak from local storage or set it to 0
+let streak = localStorage.getItem("streak") || 0;
+
+// Retrieve the last updated date from local storage or set it to today
+let lastUpdated =
+  localStorage.getItem("lastUpdated") || new Date().toDateString();
+
+// Get today's date as a string
+let thisDay = new Date().toDateString();
+
+// If today is a different day than lastUpdated, reset the streak to 0
+if (thisDay !== lastUpdated) {
+  streak = 0;
+}
+
+// Update the streak on the page
+document.getElementById("streak").textContent = streak;
+
+// Add an event listener to the button
+document.getElementById("increase-streak").addEventListener("click", () => {
+  console.log("streak counter");
+  // Get today's date as a string
+  let thisDay = new Date().toDateString();
+
+  // Check if the streak has already been incremented for the current day
+  if (thisDay === lastUpdated) {
+    alert("You have already incremented your streak today.");
+    return;
+  }
+
+  // Increment the streak by 1
+  streak++;
+
+  // Update the streak on the page
+  document.getElementById("streak").textContent = streak;
+
+  // Update the last updated date in local storage
+  localStorage.setItem("lastUpdated", thisDay);
+
+  // Update the streak in local storage
+  localStorage.setItem("streak", streak);
+});
