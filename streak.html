@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Streak Counter</title>
+  </head>
+  <body>
+    <h1>Streak Counter</h1>
+    <p>Today is <span id="today"></span>.</p>
+    <p>Your current streak is <span id="streak"></span>.</p>
+    <button id="incrementBtn">Increment Streak</button>
+
+    <script>
+      // Get the current date
+      const today = new Date();
+      const todayString = today.toDateString();
+
+      // Get the streak count from local storage, or start at 0
+      let streak = parseInt(localStorage.getItem("streak") || "0");
+
+      // Get the last date from local storage, or set to today
+      let lastDate = localStorage.getItem("lastDate") || todayString;
+
+      // If the last date was not today, reset the streak and update the last date
+      if (lastDate !== todayString) {
+        streak = 0;
+        localStorage.setItem("streak", streak.toString());
+        localStorage.setItem("lastDate", todayString);
+      }
+
+      // Update the UI with the current streak and today's date
+      document.getElementById("streak").textContent = streak.toString();
+      document.getElementById("today").textContent = todayString;
+
+      // Add an event listener to the increment button
+      document.getElementById("incrementBtn").addEventListener("click", () => {
+        // If the last date was not today, reset the streak and update the last date
+        if (lastDate !== todayString) {
+          streak = 0;
+          localStorage.setItem("streak", streak.toString());
+          localStorage.setItem("lastDate", todayString);
+        }
+
+        // Increment the streak if it's a new day, and update the UI and local storage
+        if (lastDate !== todayString) {
+          streak += 1;
+          localStorage.setItem("streak", streak.toString());
+          document.getElementById("streak").textContent = streak.toString();
+          lastDate = todayString;
+          localStorage.setItem("lastDate", lastDate);
+        }
+      });
+    </script>
+  </body>
+</html>
