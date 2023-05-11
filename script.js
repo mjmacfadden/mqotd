@@ -6,7 +6,48 @@ const quotesOfTheDay = [
     id: ,
     src: "",
   },
-  */
+  */  
+  {
+    date: "06222023",
+    quote: "These pipes, are clean!",
+    id: 26391,
+    src: "https://www.youtube.com/embed/JxxNvfVfDB0?start=03",
+  },
+  //Forgetting Sarah Marshall
+  {
+    date: "06212023",
+    quote: "You shall not pass!",
+    id: 9870,
+    src: "https://www.youtube.com/embed/l7Z05Fq2f58?start=15",
+  },
+  //Zoolander
+  {
+    date: "06202023",
+    quote: "I feel like I'm taking crazy pills!",
+    id: 9398,
+    src: "https://www.youtube.com/embed/fRL80YB0x3s?start=12",
+  },
+  //Austin Powers: The Spy Who Shagged Me
+  {
+    date: "06192023",
+    quote: "I eat because I'm unhappy. I'm unhappy because I eat.",
+    id: 817,
+    src: "https://www.youtube.com/embed/g5AixBKy7b4?start=23&end=36",
+  },
+  //So I Married An Axe Murderer
+  {
+    date: "06182023",
+    quote: "Look at the size of that boy's head. I'm not kidding, it's like an orange on a toothpick.",
+    id: 10442,
+    src: "https://www.youtube.com/embed/IqycJpRdVaY?start=8&end=78",
+  },
+  //Billy Madison
+  {
+    date: "06172023",
+    quote: "O'Doyle I've got a feeling your whole family is going down.",
+    id: 11017,
+    src: "https://www.youtube.com/embed/oabhxYbQdpc?start=36&end=67",
+  },
   //The Town
   {
     date: "06162023",
