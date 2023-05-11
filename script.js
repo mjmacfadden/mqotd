@@ -7,6 +7,7 @@ const quotesOfTheDay = [
     src: "",
   },
   */  
+  //Cabin Boy
   {
     date: "06222023",
     quote: "These pipes, are clean!",
