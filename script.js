@@ -6,7 +6,56 @@ const quotesOfTheDay = [
     id: ,
     src: "",
   },
-  */  
+  */
+  //Saving Private Ryan
+  {
+    date: "06292023",
+    quote: "I'm going to shoot you because I don't like you.",
+    id: 857,
+    src: "https://www.youtube.com/embed/s2Y9_nE0dPg?start=57&end=61",
+  },
+ //The Big Lebowski
+  {
+    date: "06282023",
+    quote: "That rug really tied the room together, did it not?",
+    id: 115,
+    src: "https://www.youtube.com/embed/ezQLP1dj_t8?end=3",
+  },
+  //The Truman Show
+  {
+    date: "06272023",
+    quote: "Good morning! Oh, and incease I don't see you, good afternoon, good evening, and good night.",
+    id: 37165,
+    src: "https://www.youtube.com/embed/MdwuW8n3JYA?end=8",
+  },
+  //Out Cold
+  {
+    date: "06262023",
+    quote: "Yeah, carpe the diem. Sieze the carp!",
+    id: 14369,
+    src: "https://www.youtube.com/embed/2PzqUjrr3aI?start=18&end=25",
+  },  
+  //The Waterboy
+  {
+    date: "06252023",
+    quote: "There's something wrong with his medulla oblongata.",
+    id: 10663,
+    src: "https://www.youtube.com/embed/cu7A8LIzL1o?start=88&end=102",
+  },
+  //There's Something About Mary
+  {
+    date: "06242023",
+    quote: "You heard of this thing The 8 Minute Abs? Well this is going to blow that right out of the water. Listen to this: 7 Minute Abs.",
+    id: 544,
+    src: "https://www.youtube.com/embed/JB2di69FmhE?start=45&end=61",
+  },
+  //The 40 Year Old Virgin
+  {
+    date: "06232023",
+    quote: "I hope you have a big trunk, because I'm going to put my bike in it.",
+    id: 6957,
+    src: "https://www.youtube.com/embed/hVbHijaOpuI?start=28&end=35",
+  },
   //Cabin Boy
   {
     date: "06222023",
@@ -40,7 +89,7 @@ const quotesOfTheDay = [
     date: "06182023",
     quote: "Look at the size of that boy's head. I'm not kidding, it's like an orange on a toothpick.",
     id: 10442,
-    src: "https://www.youtube.com/embed/IqycJpRdVaY?start=8&end=78",
+    src: "https://www.youtube.com/embed/IqycJpRdVaY?start=8&end=18",
   },
   //Billy Madison
   {
