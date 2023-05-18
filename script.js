@@ -1,12 +1,112 @@
 const quotesOfTheDay = [
   /*
   {
-    date: "062023",
+    date: "072023",
     quote: "",
     id: ,
     src: "",
   },
   */
+  //The Waterboy
+  {
+    date: "07132023",
+    quote: "Oh no, we suck again.",
+    id: 10663,
+    src: "https://www.youtube.com/embed/qi1LMIUOOAI",
+  },
+  //Air Force One
+  {
+    date: "07122023",
+    quote: "Get off my plane.",
+    id: 9772,
+    src: "https://www.youtube.com/embed/tYAO4xAODoY?start=53&end=71",
+  },
+  //The Fugitive
+  {
+    date: "07112023",
+    quote: "What I want from each and every one of you is a hard-target search of every gas station, residence, warehouse, farmhouse, henhouse, outhouse and doghouse in that area.",
+    id: 5503,
+    src: "https://www.youtube.com/embed/bHOi_lo_dIA?start=15",
+  },
+  //Gladiator
+  {
+    date: "07102023",
+    quote: "Are you not entertained? Are you NOT entertained?",
+    id: 98,
+    src: "https://www.youtube.com/embed/L-l6tHeseDY",
+  },
+  //Happy Gilmore
+  {
+    date: "07092023",
+    quote: "Ok, well I'll be at the Red Lobster in case you change your mind, Shooter. God bless!",
+    id: 9614,
+    src: "https://www.youtube.com/embed/xFH-y-gJn6w?start=10",
+  },
+  //Mallrats
+  {
+    date: "07082023",
+    quote: "A schooner is a sailboat.",
+    id: 2293,
+    src: "https://www.youtube.com/embed/sahnApE0I7c?start=5&end=28",
+  },
+
+  //Austin Powers in Goldmember
+  {
+    date: "07072023",
+    quote: "Would you like a smoke and a pancake?",
+    id: 818,
+    src: "https://www.youtube.com/embed/_LlPU6KenjU?start=12",
+  },
+  //Varsity Blues
+  {
+    date: "07062023",
+    quote: "I don't want your life.",
+    id: 14709,
+    src: "https://www.youtube.com/embed/FX8RuHII718",
+  },
+
+  //Step Brothers
+  {
+    date: "07052023",
+    quote: "We strictly do 80s Joel music, sir.",
+    id: 12133,
+    src: "https://www.youtube.com/embed/kFJdl7t2k5E?end=16",
+  },
+  //Independence Day
+  {
+    date: "07042023",
+    quote: "They're using our own satellites against us. The clock is ticking.",
+    id: 602,
+    src: "https://www.youtube.com/embed/-XbYQ59vfN4?start=63",
+  },
+  //Bring It On
+  {
+    date: "07032023",
+    quote: "These are not spirit fingers, these are spirit fingers, and these are gold.",
+    id: 1588,
+    src: "https://www.youtube.com/embed/MNyDA0osork?start=180",
+  }, 
+  //Happy Gilmore
+  {
+    date: "07022023",
+    quote: "And you can count on me, waiting for you in the parking lot.",
+    id: 9614,
+    src: "https://www.youtube.com/embed/Ibafv4pOLZE?start=104",
+  },
+  //Billy Madison
+  {
+    date: "07012023",
+    quote: "Chlorophyll, more like borophyll.",
+    id: 11017,
+    src: "https://www.youtube.com/embed/zaxH4xeMGzM?end=9",
+  },
+  //Semi-Pro
+  {
+    date: "06302023",
+    quote: "Maybe you should try a different bank, a big bank.",
+    id: 13260,
+    src: "https://www.youtube.com/embed/RqdtLQGxMG8?&start=6&end=29",
+  },
   //Saving Private Ryan
   {
     date: "06292023",
