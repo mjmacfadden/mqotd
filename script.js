@@ -7,6 +7,34 @@ const quotesOfTheDay = [
     src: "",
   },
   */
+  //The Shawshank
+  {
+    date: "07172023",
+    quote: "I guess it comes down to a simple choice. Get busy living, or get busy dying.",
+    id: 278,
+    src: "https://www.youtube.com/embed/46GwJbrMghQ?start=174&end=185",
+  },
+  //Rush Hour
+  {
+    date: "07162023",
+    quote: "Do you understand the words that are coming out of my mouth?",
+    id: 2109,
+    src: "https://www.youtube.com/embed/0Rl9Cxc7uZA?start=25&end=32",
+  },
+  //Rounders
+  {
+    date: "07152023",
+    quote: "If you can't spot the sucker in your first half hour at the table, then you are the sucker.",
+    id: 10220,
+    src: "https://www.youtube.com/embed/5vEp5Bv-J40?start=50&end=65",
+  },
+  //Catch Me IIf You Can
+  {
+    date: "07142023",
+    quote: "How did you do it Frank? How did you cheat on the bar exam in Louisiana?",
+    id: 640,
+    src: "https://www.youtube.com/embed/c9Uu7sxScYo?end=15",
+  },
   //The Waterboy
   {
     date: "07132023",
