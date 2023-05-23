@@ -1,12 +1,131 @@
 const quotesOfTheDay = [
   /*
   {
-    date: "072023",
+    date: "082023",
     quote: "",
     id: ,
     src: "",
   },
   */
+  //Space Balls
+  {
+    date: "08032023",
+    quote: "You have the ring, and I see your schwartz is as big as mine.",
+    id: 957,
+    src: "https://www.youtube.com/embed/pPkWZdluoUg?start=47&end=59",
+  },
+  //Wayne's World 2
+  {
+    date: "08022023",
+    quote: "Ok, well we'll take these home, run through them with a fine toothed comb, cross the t's and dot the... lower case j's.",
+    id: 8873,
+    src: "https://www.youtube.com/embed/9vvMKxDvAt8?start=109&end=131",
+  },
+  //Meatballs
+  {
+    date: "08012023",
+    quote: "But it doesn't matter. It just doesn't matter.",
+    id: 14035,
+    src: "https://www.youtube.com/embed/-TogGxzlfhM?start=42&end=109",
+  },
+  //I Spy
+  {
+    date: "07312023",
+    quote: "Like a jelly bird?",
+    id: 8427,
+    src: "https://www.youtube.com/embed/NiL3nbLu7ac?start=531&end=559",
+  },
+  //Wet Hot American Summer
+  {
+    date: "07302023",
+    quote: "My gurnal, I write my thoughts in it every day.",
+    id: 2171,
+    src: "https://www.youtube.com/embed/7oZgCaplvtQ?start=27&end=42",
+  },
+  //3 Ninjas
+  {
+    date: "07292023",
+    quote: "Rocky loves Emily. Rocky loves Emily.",
+    id: 16314,
+    src: "https://www.youtube.com/embed/2eb36hHD2nk?end=15",
+  },
+  //Wayne's World
+  {
+    date: "07282023",
+    quote: "Milwaukee has certainly had its share of visitors. The French missionaries and explorers were coming here as early as the late 1600s to trade with the Native Americans",
+    id: 8872,
+    src: "https://www.youtube.com/embed/o5FT3IGXtAk?start=40&end=69",
+  },
+  //The Mighty Ducks
+  {
+    date: "07272023",
+    quote: "Thank you very much Mr. Ducksworth. Quack, quack, quack, quack Mr. Ducksworth.",
+    id: 10414,
+    src: "https://www.youtube.com/embed/K00Llw8OpKY?start=9",
+  },
+  //Kindergarten Cop
+  {
+    date: "07262023",
+    quote: "It's not a tumor. It's not a tumor... at all.",
+    id: 951,
+    src: "https://www.youtube.com/embed/CT8w27nCiwc?start=56&end=62",
+  },
+  //Animal House
+  {
+    date: "07252023",
+    quote: "Was it over when the Germans bombed Pearl Harbor?",
+    id: 8469,
+    src: "https://www.youtube.com/embed/V8lT1o0sDwI?start=10",
+  },
+  //Van Wilder
+  {
+    date: "07242023",
+    quote: "I learned a long time ago that worrying is like a rocking chair. It gives you something to do, but it doesn't get you anywhere.",
+    id: 11452,
+    src: "https://www.youtube.com/embed/FrDSwK-e9VQ?start=32&end=40",
+  },
+  //Superbad
+  {
+    date: "07232023",
+    quote: "I met the Mrs. at paintball. Yeah, shot her in the neck. We just, we just hit it off.",
+    id: 8363,
+    src: "https://www.youtube.com/embed/aWDfIOHRpSA?start=26&end=51",
+  },
+  //Airheads
+  {
+    date: "07222023",
+    quote: "How can you pluralize the Loang Ranger?",
+    id: 13595,
+    src: "https://www.youtube.com/embed/umVyjrV9w6I",
+  },
+  //The Break-Up
+  {
+    date: "07212023",
+    quote: "It's my problem that she doesn't know how to pace a shower?",
+    id: 9767,
+    src: "https://www.youtube.com/embed/yiZpb7GPLYs?start=93&end=113",
+  },
+   //Jurassic Park
+   {
+    date: "07202023",
+    quote: "Must Go Gaster.",
+    id: 329,
+    src: "https://www.youtube.com/embed/Fhn_qYt4OVQ?start=32&end=52",
+  }, 
+   //I Love You, Man
+   {
+    date: "07192023",
+    quote: "You got it Jobin!",
+    id: 16538,
+    src: "https://www.youtube.com/embed/j21vWnngGRM?start=23&end=46",
+  },
+  //Tombstone
+  {
+    date: "07182023",
+    quote: "I'm your huckleberry.",
+    id: 11969,
+    src: "https://www.youtube.com/embed/R8OWNspU_yE?start=10&end=30",
+  },
   //The Shawshank
   {
     date: "07172023",
@@ -385,12 +504,12 @@ const quotesOfTheDay = [
     id: 2493,
     src: "https://www.youtube.com/embed/XCHKYNFH9Lk?start=130&end=144",
   },
-  //I Love You, Man
+  //The Machine
   {
     date: "05252023",
-    quote: "You got it Jobin!",
-    id: 16538,
-    src: "https://www.youtube.com/embed/j21vWnngGRM?start=23&end=46",
+    quote: "What is wrong with this shirt?",
+    id: 647250,
+    src: "https://www.youtube.com/embed/AwDKLEaJxMk?start=39&end=45",
   },
   //Jurassic Park
   {
