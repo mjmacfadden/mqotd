@@ -7,6 +7,69 @@ const quotesOfTheDay = [
     src: "",
   },
   */
+  //Robin Hood Men In Tights
+  {
+    date: "08122023",
+    quote: "Wait a minute! There's things here! There's rocks, there's trees, there's birds, there's squirrels. Come on, we'll bless them all until we get vashnigyered.",
+    id: 8005,
+    src: "https://www.youtube.com/embed/k4v8BVKlAfM?start=152",
+  },
+  //Dumb and Dumber
+  {
+    date: "08112023",
+    quote: "No, it's a cardigan, but thanks for noticing.",
+    id: 8467,
+    src: "https://www.youtube.com/embed/gvVOt27Q1Nw?end=16",
+  },
+  //Super Troopers
+  {
+    date: "08102023",
+    quote: "I swear to god I'll pistol whip the next guy that says Shenanigans.",
+    id:  39939,
+    src: "https://www.youtube.com/embed/JNPW2wZ4D2s?start=29&end=46",
+  },
+  //Troy
+  {
+    date: "08092023",
+    quote: "Imagine a king who fights his own battles. Wouldn't that be a sight?",
+    id: 652,
+    src: "https://www.youtube.com/embed/TDtEM_W1XZg?start=62&end=91",
+  },
+  //Ocean's 11
+  {
+    date: "08082023",
+    quote: "Man, you've got some lovely hands here. Do you moisturize?",
+    id: 161,
+    src: "https://www.youtube.com/embed/Lfxo4Ls9fbc?start=30&end=57",
+  },
+  //Casino
+  {
+    date: "08072023",
+    quote: "From now on, I want you to put an equal amount of blueberries in each muffin.",
+    id: 524,
+    src: "https://www.youtube.com/embed/3VsgpYCPzE0?start=53&end=68",
+  },
+  //Heat
+  {
+    date: "08062023",
+    quote: "Don't let yourself get attached to anything you are not willing to walk out on in 30 seconds flat if you feel the heat around the corner.",
+    id: 949,
+    src: "https://www.youtube.com/embed/rGPWW9Pjzto?end=12",
+  },
+   //Zoolander
+   {
+    date: "08052023",
+    quote: "I feel like I'm taking crazy pills!",
+    id: 9398,
+    src: "https://www.youtube.com/embed/fRL80YB0x3s?start=12",
+  },
+  //Old School
+  {
+    date: "08042023",
+    quote: "Oh yeah, Cheeeeeese. Yeah. Didn't we lock you in a dumpster one time?",
+    id: 11635,
+    src: "https://www.youtube.com/embed/NnxcN2umAOk?start=23&end=37",
+  },
   //Space Balls
   {
     date: "08032023",
@@ -317,12 +380,12 @@ const quotesOfTheDay = [
     id: 9870,
     src: "https://www.youtube.com/embed/l7Z05Fq2f58?start=15",
   },
-  //Zoolander
+  //Old School
   {
     date: "06202023",
-    quote: "I feel like I'm taking crazy pills!",
-    id: 9398,
-    src: "https://www.youtube.com/embed/fRL80YB0x3s?start=12",
+    quote: "Bring your green hat.",
+    id: 11635,
+    src: "https://www.youtube.com/embed/70uQhl7jwOs?start=20",
   },
   //Austin Powers: The Spy Who Shagged Me
   {
