@@ -12,7 +12,7 @@ const quotesOfTheDay = [
     date: "08122023",
     quote: "Wait a minute! There's things here! There's rocks, there's trees, there's birds, there's squirrels. Come on, we'll bless them all until we get vashnigyered.",
     id: 8005,
-    src: "https://www.youtube.com/embed/k4v8BVKlAfM?start=152",
+    src: "https://www.youtube.com/embed/k4v8BVKlAfM?start=152&end=171",
   },
   //Dumb and Dumber
   {
