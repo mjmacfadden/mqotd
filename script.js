@@ -440,7 +440,7 @@ const quotesOfTheDay = [
   //Wall Street
   {
     date: "06122023",
-    quote: "Wall Street what else you got besides connections at the airport?",
+    quote: "What else you got besides connections at the airport?",
     id: 10673,
     src: "https://www.youtube.com/embed/PxdTA-wiSX8?start=3",
   },
