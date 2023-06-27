@@ -334,7 +334,7 @@ const quotesOfTheDay = [
   //The Truman Show
   {
     date: "06272023",
-    quote: "Good morning! Oh, and incease I don't see you, good afternoon, good evening, and good night.",
+    quote: "Good morning! Oh, and incase I don't see you, good afternoon, good evening, and good night.",
     id: 37165,
     src: "https://www.youtube.com/embed/MdwuW8n3JYA?end=8",
   },
