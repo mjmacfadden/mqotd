@@ -7,6 +7,21 @@ const quotesOfTheDay = [
     src: "",
   },
   */
+  //Good Will Hunting
+  {
+    date: "08142023",
+    quote:
+      "Sean, if the Professor calls about that job, just tell him, sorry, I have to go see about a girl.",
+    id: 489,
+    src: "https://www.youtube.com/embed/7TeQgzN6OlA?start=41&end=49",
+  },
+  //Wedding Crashers
+  {
+    date: "08132023",
+    quote: "Rule number 76: No excuses, play like a champion.",
+    id: 9522,
+    src: "https://www.youtube.com/embed/hPTcLZi7oH4",
+  },
   //Robin Hood Men In Tights
   {
     date: "08122023",
