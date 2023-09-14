@@ -7,6 +7,13 @@ const quotesOfTheDay = [
     src: "",
   },
   */
+  //
+  {
+    date: "09152023",
+    quote: "I believe it's jogging. Or yogging, it might be a soft J. I'm not sure, but apparently you just run for an extended period of time.",
+    id: 8699,
+    src: "https://www.youtube.com/embed/B6nFhcI4tgI?si=rb5rZYOd21HFglRz",
+  },
   //Good Will Hunting
   {
     date: "08142023",
