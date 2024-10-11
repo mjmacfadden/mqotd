@@ -997,7 +997,6 @@ updateDate();
 
 // Optional: Set an interval to update the date daily
 setInterval(updateDate, 86400000); // Update every 24 hours
-
 //END GET TODAY'S DATE
 
 
