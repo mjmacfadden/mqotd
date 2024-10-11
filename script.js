@@ -968,7 +968,7 @@ function reloadWithRandomDate() {
   const dateString = `${month}${day}${year}`;
 
   // Construct the new URL with the date parameter
-  const newUrl = `index.html?date=${dateString}`;
+  const newUrl = `?date=${dateString}`;
 
   // Redirect to the new URL
   window.location.href = newUrl;
