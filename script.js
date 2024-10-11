@@ -9,7 +9,7 @@ const quotesOfTheDay = [
   */
   //
   {
-    date: "09152023",
+    date: "08152023",
     quote: "I believe it's jogging. Or yogging, it might be a soft J. I'm not sure, but apparently you just run for an extended period of time.",
     id: 8699,
     src: "https://www.youtube.com/embed/B6nFhcI4tgI?si=rb5rZYOd21HFglRz",
@@ -193,7 +193,7 @@ const quotesOfTheDay = [
    //Jurassic Park
    {
     date: "07202023",
-    quote: "Must Go Gaster.",
+    quote: "Must Go Faster.",
     id: 329,
     src: "https://www.youtube.com/embed/Fhn_qYt4OVQ?start=32&end=52",
   }, 
@@ -939,7 +939,77 @@ if (quote) {
   console.log("No quote found for that date");
 }
 
+
 let id;
+
+// START LOAD RANDOM QUOTE ONLOAD
+function reloadWithRandomDate() {
+  // Check if there is already a date parameter in the URL
+  const queryParams = new URLSearchParams(window.location.search);
+  
+  // If the "date" parameter exists, do nothing
+  if (queryParams.has("date")) {
+    return; // Exit the function if date parameter is present
+  }
+
+  // Define the start and end dates
+  const startDate = new Date(2023, 3, 12); // April 12, 2023 (month is 0-indexed)
+  const endDate = new Date(2023, 7, 15); // August 15, 2023 (7 = August)
+
+  // Generate a random date within the range
+  const randomDate = new Date(
+    startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime())
+  );
+
+  // Format the random date as "MMddyyyy"
+  const month = String(randomDate.getMonth() + 1).padStart(2, '0'); // Adjust for zero-indexed months
+  const day = String(randomDate.getDate()).padStart(2, '0');
+  const year = String(randomDate.getFullYear());
+  const dateString = `${month}${day}${year}`;
+
+  // Construct the new URL with the date parameter
+  const newUrl = `index.html?date=${dateString}`;
+
+  // Redirect to the new URL
+  window.location.href = newUrl;
+}
+
+
+// START GET TODAY'S DATE
+function updateDate() {
+  const dateElement = document.getElementById("todaysDate");
+  
+  // Get the current date
+  const today = new Date();
+  
+  // Options for formatting the date
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  
+  // Format the date in the desired format (e.g., "October 11, 2024")
+  const formattedDate = today.toLocaleDateString('en-US', options);
+  
+  // Update the content of the <h3> element
+  dateElement.innerText = formattedDate;
+}
+
+// Call the function to update the date
+updateDate();
+
+// Optional: Set an interval to update the date daily
+setInterval(updateDate, 86400000); // Update every 24 hours
+
+//END GET TODAY'S DATE
+
+
+
+// Run the function on page load
+window.onload = function () {
+  reloadWithRandomDate(); // Call the function to set a random date
+};
+// END LOAD RANDOM QUOTE ONLOAD
+
+
+
 
 // START TRY ANOTHER BUTTON
 let previousDate = null; // Initialize previous date to null
@@ -947,7 +1017,7 @@ let previousDate = null; // Initialize previous date to null
 function setRandomDate() {
   // Generate a random date within a range (April 1, 2023 to April 30, 2023)
   const startDate = new Date(2023, 3, 12); // Note: month is 0-based index
-  const endDate = new Date();
+  const endDate = new Date(2023, 7, 15);
   let randomDate = null;
 
   // Loop until a different date is generated
@@ -982,6 +1052,8 @@ function setRandomDate() {
   location.reload();
 }
 //END TRY ANOTHER BUTTON
+
+
 
 // Loop through the quotesOfTheDay array
 for (let i = 0; i < quotesOfTheDay.length; i++) {
